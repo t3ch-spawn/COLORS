@@ -1,6 +1,10 @@
 header {
   width: 100%;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: white;
 }
 
 .navigation {
@@ -9,9 +13,7 @@ header {
   align-items: center;
   width: 90%;
   margin: 0 auto;
-  position: sticky;
-  top: 0;
-  left: 0;
+
   padding: 2rem 0;
 
   &__logo {
