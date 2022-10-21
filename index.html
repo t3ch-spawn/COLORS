@@ -1,16 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MAX</title>
-</head>
-<body>
-  
-  <header>
-    <div class="navigation"></div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAX</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navigation">
+        <div class="navigation__logo">COLORS</div>
 
-</body>
+        <div class="navigation__list">
+          <div class="navigation__item">
+            <a href="#hero" class="navigation__link">Home</a>
+          </div>
+          <div class="navigation__item">
+            <a href="#about" class="navigation__link">About</a>
+          </div>
+          <div class="navigation__item">
+            <a href="#models" class="navigation__link">Models</a>
+          </div>
+          <div class="navigation__item">
+            <a href="#gallery" class="navigation__link">Gallery</a>
+          </div>
+        </div>
+
+        <div class="navigation__cta">
+          <a href="#" class="navigation__cta-link"> Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="hero__typography">
+          <p class="hero__sub-heading">
+            Colors are the smiles of nature. GET A...
+          </p>
+
+          <h1 class="hero__heading">NEW LOOK</h1>
+
+          <p class="hero__descrip">
+            Your attitude is like a box of crayons that color your world.
+            Constantly color your picture gray, and your picture will always be
+            bleak. Try adding some bright colors to the picture by including
+            humor, and your picture beginns to light uop
+          </p>
+
+          <div class="hero__cta">Try One</div>
+        </div>
+
+        <div class="hero__image">
+          <img src="./img/header-model.png" alt="img" />
+        </div>
+      </section>
+
+      <!-- ABOUT US!! -->
+      <section class="about" id="about">
+        <h2 class="about__heading">ABOUT <span>US</span></h2>
+        <div class="about__content">
+          <div class="about__column1">
+            <div class="about__image about__image--1">
+              <img src="./img/aboutUs-model-1.png" alt="img" />
+            </div>
+
+            <h2 class="about__sub-heading">NEW FEEL</h2>
+            <p class="about__descrip">
+              Black and white are the colors of photography. They symbolize the
+              alternatives of hope and despair to which mankind is forever
+              subjected
+            </p>
+          </div>
+
+          <div class="about__column2">
+            <div class="about__image about__image--2">
+              <img src="./img/aboutUs-model-2.png" alt="img" />
+            </div>
+
+            <p class="about__descrip">
+              Black and white are the colors of photography. They symbolize the
+              alternatives of hope and despair to which mankind is forever
+              subjected
+            </p>
+            <h2 class="about__sub-heading">NEW VIBES</h2>
+          </div>
+        </div>
+      </section>
+
+      <section class="popularWeek">
+        <div class="popularWeek__heading">Popular <span>This week</span></div>
+
+        <div class="popularWeek__content">
+          <div class="popularWeek__column1">
+            <div class="popularWeek__main-img">
+              <img
+                class="popularWeek__main-img--1"
+                src="./img/popular-1.png"
+                alt=""
+              />
+              <div class="popularWeek__cta popularWeek__cta--1">Save Inspo</div>
+            </div>
+
+            <div class="popularWeek__sub-img">
+              <div class="popularWeek__img-container">
+                <img
+                  class="popularWeek__sub-img--1"
+                  src="./img/popular-3.png"
+                  alt=""
+                />
+              </div>
+
+              <div class="popularWeek__cta popularWeek__cta--2">Save Inspo</div>
+            </div>
+          </div>
+
+          <div class="popularWeek__column2">
+            <div class="popularWeek__main-img">
+              <img
+                class="popularWeek__main-img--2"
+                src="./img/popular-4.png"
+                alt=""
+              />
+              <div class="popularWeek__cta popularWeek__cta--3">Save Inspo</div>
+            </div>
+
+            <div class="popularWeek__sub-img">
+              <img
+                class="popularWeek__sub-img--2"
+                src="./img/popular-2.png"
+                alt=""
+              />
+              <div class="popularWeek__cta popularWeek__cta--4">Save Inspo</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="models" id="models"></section>
+      <section class="gallery" id="gallery"></section>
+    </main>
+  </body>
 </html>
