@@ -269,7 +269,6 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 100rem;
 }
 .gallery__heading {
   text-transform: uppercase;
@@ -485,4 +484,18 @@ body {
   align-items: center;
   flex-direction: column;
   font-family: "Montserrat", sans-serif;
+}
+
+.section {
+  opacity: 0;
+  transform: translateY(20rem);
+  transition: 1s ease;
+  pointer-events: none;
+  transition-delay: 0.05s;
+}
+
+.section.show {
+  opacity: 1;
+  transform: translateY(0rem);
+  pointer-events: all;
 }/*# sourceMappingURL=main.css.map */
