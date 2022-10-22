@@ -135,11 +135,12 @@ main {
 
     &--1 {
       background-color: $gray-ish;
-      border-radius: 1rem;
+      border-radius: $pic-radius;
+      margin-bottom: 7rem;
     }
     &--2 {
       background-color: $black-ish;
-      border-radius: 1rem;
+      border-radius: $pic-radius;
     }
   }
 
@@ -200,7 +201,7 @@ main {
 
     img {
       height: 45rem;
-      border-radius: 1rem;
+      border-radius: $pic-radius;
     }
 
     &--1 {
@@ -219,7 +220,7 @@ main {
       $purple-dark 20%
     );
     background-color: $pink-ish-light;
-    border-radius: 1rem;
+    border-radius: $pic-radius;
   }
 
   &__sub-img {
@@ -227,7 +228,7 @@ main {
 
     img {
       height: 35rem;
-      border-radius: 1rem;
+      border-radius: $pic-radius;
     }
 
     &--1 {
@@ -249,6 +250,7 @@ main {
     font-weight: 600;
     color: white;
     cursor: pointer;
+    transition: 0.3s ease;
 
     &--1 {
       background-color: $blue-dark;
@@ -261,6 +263,185 @@ main {
     }
     &--4 {
       background-color: $pink-ish-dark;
+    }
+
+    &:hover {
+      letter-spacing: 2px;
+      width: 15rem;
+    }
+  }
+}
+
+/////////////////////////////////
+//MODELS!!
+
+.models {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: $section-margin;
+
+  &__heading {
+    margin-bottom: $heading-margin-bottom;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 6.4rem;
+
+    span {
+      color: $lime-dark;
+    }
+  }
+
+  &__content {
+    width: 90%;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+///////////////////////////
+//GALLERY
+.gallery {
+  margin-top: $section-margin;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100rem;
+
+  &__heading {
+    text-transform: uppercase;
+    font-size: 6rem;
+    text-align: center;
+    margin-bottom: $heading-margin-bottom;
+
+    span {
+      color: $lime-dark;
+    }
+  }
+
+  &__content {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__images-container {
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+
+    // make-shift gap for children
+    & > *:not(:last-child) {
+      margin-right: -10rem;
+    }
+  }
+
+  // outer-rectangle with background-color
+  &__rectangle {
+    display: flex;
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+
+    .img-contain {
+      position: absolute;
+    }
+
+    &--1 {
+      background-color: $lime-light;
+      transform: translateY(8rem) rotate(-11deg);
+      justify-content: flex-start;
+
+      // inner-div housing the image itself
+      .img-contain {
+        top: 50%;
+        left: -2rem;
+        transform: rotate(7deg) translateY(-50%);
+      }
+
+      img {
+        height: 13rem;
+      }
+    }
+    &--2 {
+      background-color: $lime-dark;
+      transform: translateY(4rem) rotate(-10deg);
+
+      // inner-div housing the image itself
+      .img-contain {
+        top: 10%;
+        left: -2rem;
+        transform: rotate(7deg) translateY(-10%);
+      }
+
+      img {
+        height: 16rem;
+      }
+    }
+    &--3 {
+      background-color: $yellow-light;
+      transform: translateY(2rem);
+
+      // inner-div housing the image itself
+      .img-contain {
+        top: -10%;
+        left: -2rem;
+      }
+
+      img {
+        height: 13rem;
+      }
+    }
+    &--4 {
+      background-color: $yellow-dark;
+
+      // inner-div housing the image itself
+      .img-contain {
+        top: 20%;
+        left: 0;
+      }
+
+      img {
+        height: 13.5rem;
+      }
+    }
+    &--5 {
+      background-color: $blue-light;
+      transform: translateY(0rem) rotate(10deg);
+
+      // inner-div housing the image itself
+      .img-contain {
+        top: 20%;
+        left: -20%;
+        transform: rotate(-9deg);
+      }
+
+      img {
+        height: 13rem;
+      }
+    }
+    &--6 {
+      background-color: $blue-dark;
+      transform: translateY(4rem) rotate(11deg);
+
+      // inner-div housing the image itself
+      .img-contain {
+        transform: rotate(-9deg);
+        bottom: -10%;
+      }
+
+      img {
+        height: 15rem;
+      }
     }
   }
 }

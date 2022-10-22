@@ -7,7 +7,7 @@ main {
 
 .hero {
   display: flex;
-  margin: 10rem auto;
+  margin: 12rem auto;
   width: 80%;
   justify-content: center;
   align-items: center;
@@ -129,11 +129,12 @@ main {
 }
 .about__image--1 {
   background-color: #f9f9f9;
-  border-radius: 1rem;
+  border-radius: 5px;
+  margin-bottom: 7rem;
 }
 .about__image--2 {
   background-color: #121212;
-  border-radius: 1rem;
+  border-radius: 5px;
 }
 .about__descrip {
   width: 85%;
@@ -142,7 +143,7 @@ main {
 }
 
 .popularWeek {
-  margin-top: 10rem;
+  margin-top: 12rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -185,7 +186,7 @@ main {
 }
 .popularWeek__main-img img {
   height: 45rem;
-  border-radius: 1rem;
+  border-radius: 5px;
 }
 .popularWeek__main-img--1 {
   background-color: rgba(97, 218, 244, 0.5);
@@ -197,14 +198,14 @@ main {
   width: 20rem;
   background-image: linear-gradient(90deg, #e65af2 45%, #b42ac0 20%);
   background-color: rgba(255, 127, 80, 0.5);
-  border-radius: 1rem;
+  border-radius: 5px;
 }
 .popularWeek__sub-img {
   padding: 2.5rem;
 }
 .popularWeek__sub-img img {
   height: 35rem;
-  border-radius: 1rem;
+  border-radius: 5px;
 }
 .popularWeek__sub-img--2 {
   background-color: rgba(255, 127, 80, 0.5);
@@ -220,6 +221,7 @@ main {
   font-weight: 600;
   color: white;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 .popularWeek__cta--1 {
   background-color: #61daf4;
@@ -232,6 +234,148 @@ main {
 }
 .popularWeek__cta--4 {
   background-color: #ff7f50;
+}
+.popularWeek__cta:hover {
+  letter-spacing: 2px;
+  width: 15rem;
+}
+
+.models {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12rem;
+}
+.models__heading {
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 6.4rem;
+}
+.models__heading span {
+  color: #78e59b;
+}
+.models__content {
+  width: 90%;
+}
+.models__content img {
+  width: 100%;
+}
+
+.gallery {
+  margin-top: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100rem;
+}
+.gallery__heading {
+  text-transform: uppercase;
+  font-size: 6rem;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.gallery__heading span {
+  color: #78e59b;
+}
+.gallery__content {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.gallery__images-container {
+  display: flex;
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+}
+.gallery__images-container > *:not(:last-child) {
+  margin-right: -10rem;
+}
+.gallery__rectangle {
+  display: flex;
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  overflow: hidden;
+}
+.gallery__rectangle img {
+  width: 100%;
+}
+.gallery__rectangle .img-contain {
+  position: absolute;
+}
+.gallery__rectangle--1 {
+  background-color: rgba(120, 229, 155, 0.5);
+  transform: translateY(8rem) rotate(-11deg);
+  justify-content: flex-start;
+}
+.gallery__rectangle--1 .img-contain {
+  top: 50%;
+  left: -2rem;
+  transform: rotate(7deg) translateY(-50%);
+}
+.gallery__rectangle--1 img {
+  height: 13rem;
+}
+.gallery__rectangle--2 {
+  background-color: #78e59b;
+  transform: translateY(4rem) rotate(-10deg);
+}
+.gallery__rectangle--2 .img-contain {
+  top: 10%;
+  left: -2rem;
+  transform: rotate(7deg) translateY(-10%);
+}
+.gallery__rectangle--2 img {
+  height: 16rem;
+}
+.gallery__rectangle--3 {
+  background-color: rgba(255, 231, 106, 0.5);
+  transform: translateY(2rem);
+}
+.gallery__rectangle--3 .img-contain {
+  top: -10%;
+  left: -2rem;
+}
+.gallery__rectangle--3 img {
+  height: 13rem;
+}
+.gallery__rectangle--4 {
+  background-color: #ffe76a;
+}
+.gallery__rectangle--4 .img-contain {
+  top: 20%;
+  left: 0;
+}
+.gallery__rectangle--4 img {
+  height: 13.5rem;
+}
+.gallery__rectangle--5 {
+  background-color: rgba(97, 218, 244, 0.5);
+  transform: translateY(0rem) rotate(10deg);
+}
+.gallery__rectangle--5 .img-contain {
+  top: 20%;
+  left: -20%;
+  transform: rotate(-9deg);
+}
+.gallery__rectangle--5 img {
+  height: 13rem;
+}
+.gallery__rectangle--6 {
+  background-color: #61daf4;
+  transform: translateY(4rem) rotate(11deg);
+}
+.gallery__rectangle--6 .img-contain {
+  transform: rotate(-9deg);
+  bottom: -10%;
+}
+.gallery__rectangle--6 img {
+  height: 15rem;
 }
 
 header {
