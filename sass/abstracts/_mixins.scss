@@ -6,3 +6,15 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin subHeadingStyle {
+  margin-bottom: $heading-margin-bottom;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 6.4rem;
+  text-align: center;
+
+  span {
+    color: $lime-dark;
+  }
+}
