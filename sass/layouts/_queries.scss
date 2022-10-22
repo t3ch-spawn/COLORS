@@ -1,0 +1,160 @@
+@media screen and (max-width: 1000px) {
+  /////////////////////
+  /// HERO QUERY
+  .hero {
+    &__heading {
+      font-size: 15rem;
+    }
+  }
+
+  /////////////////////
+  /// ABOUT QUERY
+  .about {
+    &__content {
+      flex-direction: column;
+    }
+
+    &__column1 {
+      align-items: flex-end;
+      margin-right: 0;
+      text-align: right;
+    }
+
+    &__column2 {
+      flex-direction: column;
+
+      .about__descrip {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  /////////////////////
+  /// HERO QUERY
+  .hero {
+    &__heading {
+      font-size: 8rem;
+    }
+
+    &__image {
+      img {
+        height: 40rem;
+      }
+    }
+  }
+
+  /////////////////////
+  /// ABOUT QUERY
+  .about {
+    &__sub-heading {
+      font-size: 5rem;
+      margin-bottom: 3rem;
+    }
+
+    &__image {
+      img {
+        height: 40rem;
+      }
+    }
+
+    &__image--1 {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  // .navigation__list {
+  //   display: none;
+  // }
+
+  /////////////////////
+  /// HERO QUERY
+  .hero {
+    &__image {
+      img {
+        height: 30rem;
+      }
+    }
+  }
+
+  //////////////////////
+  /// POPULAR WEEK QUERY
+  .popularWeek {
+    &__content {
+      flex-direction: column;
+    }
+
+    &__heading {
+      width: 100%;
+    }
+
+    &__column1 {
+      align-items: flex-end;
+    }
+
+    &__column2 {
+      align-items: flex-start;
+      margin-left: 0;
+    }
+
+    &__sub-img {
+      padding: 5rem 0rem;
+    }
+
+    &__img-container {
+      max-width: 25rem;
+      position: relative;
+      height: 30rem;
+
+      img {
+        // transform: translateX(-20rem);
+        position: absolute;
+        right: -6rem;
+        top: -6rem;
+      }
+    }
+  }
+
+  //////////////////////
+  /// POPULAR WEEK QUERY\
+  .gallery {
+    &__images-container {
+      flex-direction: column;
+
+      // make-shift gap for children
+      & > *:not(:last-child) {
+        margin-right: 0rem;
+      }
+    }
+
+    &__rectangle {
+      transform: rotate(0deg);
+    }
+
+    &__section-1,
+    &__section-2 {
+      display: flex;
+      // width: 100%;
+
+      // make-shift gap for children
+      & > *:not(:last-child) {
+        margin-right: -7rem;
+      }
+    }
+  }
+
+  .hero {
+    display: none;
+  }
+
+  .gallery {
+    display: none;
+  }
+  .popularWeek {
+    // display: none;
+  }
+}

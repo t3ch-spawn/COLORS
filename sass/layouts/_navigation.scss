@@ -34,6 +34,7 @@ header {
   &__item {
     list-style: none;
     position: relative;
+    padding: 0 1rem;
 
     &::after {
       content: "";
