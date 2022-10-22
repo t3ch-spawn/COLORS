@@ -67,7 +67,7 @@ main {
   border-radius: 1rem;
   font-weight: 700;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: 0.3s cubic-bezier(0.41, 1.8, 0.55, 1);
 }
 .hero__cta:hover {
   letter-spacing: 2px;
@@ -239,7 +239,7 @@ main {
   font-weight: 600;
   color: white;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: 0.3s cubic-bezier(0.41, 1.8, 0.55, 1);
 }
 .popularWeek__cta--1 {
   background-color: #61daf4;
@@ -505,7 +505,7 @@ main {
   font-weight: 700;
   font-size: 2rem;
   color: white;
-  transition: 0.3s ease;
+  transition: 0.3s cubic-bezier(0.41, 1.8, 0.55, 1);
 }
 .subscribe__btn:hover {
   letter-spacing: 2px;
@@ -544,6 +544,7 @@ header {
   list-style: none;
   position: relative;
   padding: 0 1rem;
+  cursor: pointer;
 }
 .navigation__item::after {
   content: "";
@@ -563,10 +564,26 @@ header {
   opacity: 1;
   pointer-events: all;
 }
+.navigation__item:hover .navigation__item-container .link-1 {
+  transform: translateY(-3rem);
+}
+.navigation__item:hover .navigation__item-container .link-2 {
+  transform: translateY(-3rem);
+}
+.navigation__item-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 2.5rem;
+}
+.navigation__item-container > *:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
 .navigation__link {
   text-decoration: none;
   font-size: 2rem;
   color: black;
+  transition: 0.3s cubic-bezier(0.41, 1.8, 0.55, 1);
 }
 .navigation__cta {
   position: relative;
@@ -581,24 +598,17 @@ header {
   border-image-slice: 1;
   background-origin: border-box;
   background-clip: content-box, border-box;
+  cursor: pointer;
+  transition: 0.3s cubic-bezier(0.41, 1.8, 0.55, 1);
+}
+.navigation__cta:hover {
+  letter-spacing: 2px;
 }
 .navigation__cta-link {
   text-decoration: none;
   position: relative;
   font-size: 2rem;
   color: black;
-}
-.navigation__cta::after {
-  content: "";
-  top: -8px;
-  right: -8px;
-  left: -8px;
-  bottom: -8px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
 }
 
 @media screen and (max-width: 1000px) {

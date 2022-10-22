@@ -72,7 +72,7 @@ main {
     border-radius: 1rem;
     font-weight: 700;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: 0.3s cubic-bezier(0.41, 1.8, 0.55, 1);
 
     &:hover {
       letter-spacing: 2px;
@@ -152,7 +152,7 @@ main {
 }
 
 //////////////////////////////
-/// POPULAR THIS WEEL!!
+/// POPULAR THIS WEEK!!
 
 .popularWeek {
   margin-top: $section-margin;
@@ -243,7 +243,7 @@ main {
     font-weight: 600;
     color: white;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: 0.3s cubic-bezier(0.41, 1.8, 0.55, 1);
 
     &--1 {
       background-color: $blue-dark;
@@ -525,7 +525,7 @@ main {
     font-weight: 700;
     font-size: 2rem;
     color: white;
-    transition: 0.3s ease;
+    transition: 0.3s cubic-bezier(0.41, 1.8, 0.55, 1);
 
     &:hover {
       letter-spacing: 2px;
