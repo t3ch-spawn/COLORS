@@ -2,6 +2,7 @@ main {
   width: 100%;
   display: flex;
   flex-direction: column;
+  max-width: 1300px;
 }
 
 .hero {
@@ -463,7 +464,6 @@ main {
   align-items: center;
   width: 100%;
   margin-top: calc($section-margin + 12rem);
-  margin-bottom: 20rem;
 
   &__heading {
     @include subHeadingStyle;

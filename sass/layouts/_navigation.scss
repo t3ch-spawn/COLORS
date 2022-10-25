@@ -43,17 +43,15 @@ header {
       width: 0%;
       height: 2px;
       position: absolute;
-      bottom: -3px;
+      bottom: -4px;
       left: 50%;
       transform: translate(-50%);
-      opacity: 0;
       pointer-events: none;
-      transition: 0.3s ease;
+      transition: 0.3s cubic-bezier(0.41, 1.8, 0.55, 1);
     }
 
     &:hover::after {
       width: 100%;
-      opacity: 1;
       pointer-events: all;
     }
 
@@ -71,7 +69,7 @@ header {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    height: 2.5rem;
+    height: 2.3rem;
 
     & > *:not(:last-child) {
       margin-bottom: 0.5rem;
@@ -82,7 +80,7 @@ header {
     text-decoration: none;
     font-size: 2rem;
     color: black;
-    transition: 0.3s cubic-bezier(0.41, 1.8, 0.55, 1);
+    transition: 0.4s cubic-bezier(0.41, 1.8, 0.55, 1);
   }
 
   // cta with colorful border

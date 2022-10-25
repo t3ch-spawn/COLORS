@@ -3,6 +3,7 @@ main {
   width: 100%;
   display: flex;
   flex-direction: column;
+  max-width: 1300px;
 }
 
 .hero {
@@ -435,7 +436,6 @@ main {
   align-items: center;
   width: 100%;
   margin-top: 24rem;
-  margin-bottom: 20rem;
 }
 .subscribe__heading {
   margin-bottom: 5rem;
@@ -511,6 +511,130 @@ main {
   letter-spacing: 2px;
 }
 
+.footer {
+  background-color: #78e59b;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-items: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  margin-top: 12rem;
+}
+.footer__content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__left {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+.footer__left > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.footer__left p {
+  font-size: 1.6rem;
+  color: white;
+}
+.footer__left p:first-child {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.footer__social-list {
+  display: flex;
+}
+.footer__social-item {
+  list-style: none;
+}
+.footer__social-link {
+  text-decoration: none;
+}
+.footer__right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.7rem;
+  width: 70%;
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+}
+.footer__list > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.footer__item {
+  text-align: left;
+  list-style: none;
+  position: relative;
+  padding: 0 1rem;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.footer__item:first-child {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.footer__item:first-child::after {
+  content: "";
+  background-color: white;
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translate(-50%);
+  pointer-events: none;
+  transition: 0.3s cubic-bezier(0.41, 1.8, 0.55, 1);
+}
+.footer__item::after {
+  content: "";
+  background-color: white;
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%);
+  pointer-events: none;
+  transition: 0.3s cubic-bezier(0.41, 1.8, 0.55, 1);
+}
+.footer__item:hover::after {
+  width: 90%;
+  pointer-events: all;
+}
+.footer__item:hover .footer__item-container .link-1 {
+  transform: translateY(-2.5rem);
+}
+.footer__item:hover .footer__item-container .link-2 {
+  transform: translateY(-2.5rem);
+}
+.footer__item-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: flex-start;
+  height: 2.3rem;
+}
+.footer__item-container > *:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.footer__link {
+  text-decoration: none;
+  color: white;
+  transition: 0.4s cubic-bezier(0.41, 1.8, 0.55, 1);
+}
+.footer__rights {
+  color: white;
+  margin-top: 6rem;
+  font-size: 1.7rem;
+}
+
 header {
   width: 100%;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
@@ -552,16 +676,14 @@ header {
   width: 0%;
   height: 2px;
   position: absolute;
-  bottom: -3px;
+  bottom: -4px;
   left: 50%;
   transform: translate(-50%);
-  opacity: 0;
   pointer-events: none;
-  transition: 0.3s ease;
+  transition: 0.3s cubic-bezier(0.41, 1.8, 0.55, 1);
 }
 .navigation__item:hover::after {
   width: 100%;
-  opacity: 1;
   pointer-events: all;
 }
 .navigation__item:hover .navigation__item-container .link-1 {
@@ -574,7 +696,7 @@ header {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  height: 2.5rem;
+  height: 2.3rem;
 }
 .navigation__item-container > *:not(:last-child) {
   margin-bottom: 0.5rem;
@@ -583,7 +705,7 @@ header {
   text-decoration: none;
   font-size: 2rem;
   color: black;
-  transition: 0.3s cubic-bezier(0.41, 1.8, 0.55, 1);
+  transition: 0.4s cubic-bezier(0.41, 1.8, 0.55, 1);
 }
 .navigation__cta {
   position: relative;
@@ -694,12 +816,6 @@ header {
   .gallery__section-1 > *:not(:last-child), .gallery__section-2 > *:not(:last-child) {
     margin-right: -7rem;
   }
-  .hero {
-    display: none;
-  }
-  .gallery {
-    display: none;
-  }
 }
 * {
   box-sizing: border-box;
@@ -719,7 +835,6 @@ body {
   align-items: center;
   flex-direction: column;
   font-family: "Montserrat", sans-serif;
-  overflow-x: hidden;
 }
 
 .section {

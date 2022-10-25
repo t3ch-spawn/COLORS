@@ -1,0 +1,148 @@
+.footer {
+  background-color: $lime-dark;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-items: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  margin-top: $section-margin;
+
+  // top part of the footer
+  &__content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // div housing social links
+  &__left {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+
+    & > *:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+    p {
+      font-size: 1.6rem;
+      color: white;
+    }
+
+    p:first-child {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+  }
+
+  &__social-list {
+    display: flex;
+  }
+
+  &__social-item {
+    list-style: none;
+  }
+
+  &__social-link {
+    text-decoration: none;
+  }
+
+  &__right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.7rem;
+    width: 70%;
+  }
+
+  // list of items on the right side of footer
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    & > *:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__item {
+    text-align: left;
+    list-style: none;
+    position: relative;
+    padding: 0 1rem;
+    cursor: pointer;
+    width: fit-content;
+
+    &:first-child {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    &:first-child::after {
+      content: "";
+      background-color: white;
+      width: 0%;
+      height: 2px;
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translate(-50%);
+      pointer-events: none;
+      transition: 0.3s cubic-bezier(0.41, 1.8, 0.55, 1);
+    }
+    &::after {
+      content: "";
+      background-color: white;
+      width: 0%;
+      height: 2px;
+      position: absolute;
+      bottom: -3px;
+      left: 50%;
+      transform: translate(-50%);
+
+      pointer-events: none;
+      transition: 0.3s cubic-bezier(0.41, 1.8, 0.55, 1);
+    }
+
+    &:hover::after {
+      width: 90%;
+
+      pointer-events: all;
+    }
+
+    // animation for 'spin' on item
+    &:hover &-container .link-1 {
+      transform: translateY(-2.5rem);
+    }
+    &:hover &-container .link-2 {
+      transform: translateY(-2.5rem);
+    }
+  }
+
+  // div controlling link animation
+  &__item-container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: flex-start;
+    height: 2.3rem;
+
+    & > *:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: white;
+    transition: 0.4s cubic-bezier(0.41, 1.8, 0.55, 1);
+  }
+
+  &__rights {
+    color: white;
+    margin-top: 6rem;
+    font-size: 1.7rem;
+  }
+}
