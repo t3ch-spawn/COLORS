@@ -31,6 +31,22 @@
   }
 }
 
+@media screen and (max-width: 900px) {
+  //////////////////////////
+  /// FOOTER QUERY
+  .footer {
+    &__right {
+      font-size: 1.4rem;
+    }
+
+    &__item {
+      &:first-child {
+        font-size: 1.7rem;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 850px) {
   /////////////////////
   /// HERO QUERY

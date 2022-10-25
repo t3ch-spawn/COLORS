@@ -562,6 +562,7 @@ main {
 .footer__list {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 .footer__list > *:not(:last-child) {
   margin-bottom: 2rem;
@@ -575,6 +576,8 @@ main {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  display: flex;
+  flex-wrap: wrap;
 }
 .footer__item:first-child {
   font-size: 2rem;
@@ -657,6 +660,11 @@ header {
 .navigation__logo {
   font-size: 2.4rem;
   font-weight: 600;
+}
+.navigation__left {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
 }
 .navigation__list {
   display: flex;
@@ -751,6 +759,14 @@ header {
   .about__column2 .about__descrip {
     margin-top: 3rem;
     margin-bottom: 3rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .footer__right {
+    font-size: 1.4rem;
+  }
+  .footer__item:first-child {
+    font-size: 1.7rem;
   }
 }
 @media screen and (max-width: 850px) {

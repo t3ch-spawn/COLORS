@@ -20,7 +20,13 @@ header {
   &__logo {
     font-size: 2.4rem;
     font-weight: 600;
+    // width: 20%;
   }
+
+  // &__left {
+  //   display: flex;
+  //   justify-content: space-between;
+  // }
 
   // navigation list (div housing all items)
   &__list {
