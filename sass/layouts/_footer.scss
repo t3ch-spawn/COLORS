@@ -93,7 +93,7 @@
       left: 50%;
       transform: translate(-50%);
       pointer-events: none;
-      transition: 0.3s cubic-bezier(0.41, 1.8, 0.55, 1);
+      transition: 0.3s $ease-back;
     }
     &::after {
       content: "";
@@ -106,7 +106,7 @@
       transform: translate(-50%);
 
       pointer-events: none;
-      transition: 0.3s cubic-bezier(0.41, 1.8, 0.55, 1);
+      transition: 0.3s $ease-back;
     }
 
     &:hover::after {
@@ -140,7 +140,7 @@
   &__link {
     text-decoration: none;
     color: white;
-    transition: 0.4s cubic-bezier(0.41, 1.8, 0.55, 1);
+    transition: 0.4s $ease-back;
   }
 
   &__rights {
