@@ -39,14 +39,31 @@
 
   &__social-list {
     display: flex;
+
+    & > *:not(:last-child) {
+      margin-right: 1rem;
+    }
   }
 
   &__social-item {
     list-style: none;
+    background-color: white;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__social-link {
     text-decoration: none;
+    color: black;
+
+    i {
+      font-size: 1.7rem;
+    }
   }
 
   &__right {

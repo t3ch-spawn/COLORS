@@ -108,7 +108,13 @@ main {
     align-items: flex-start;
     flex-direction: column;
     width: fit-content;
-    margin-right: 2rem;
+    margin-right: 2.5rem;
+
+    .about__descrip {
+      width: 85%;
+      font-size: 2rem;
+      margin-bottom: 7rem;
+    }
   }
   &__column2 {
     display: flex;
@@ -116,6 +122,12 @@ main {
     align-items: flex-start;
     flex-direction: column-reverse;
     width: fit-content;
+
+    .about__descrip {
+      width: 85%;
+      font-size: 2rem;
+      margin-bottom: 3rem;
+    }
   }
 
   &__sub-heading {
@@ -148,7 +160,6 @@ main {
   &__descrip {
     width: 85%;
     font-size: 2rem;
-    margin-bottom: 7rem;
   }
 }
 
@@ -498,7 +509,7 @@ main {
   &__input-box {
     display: flex;
     width: 90%;
-    height: 5rem;
+    min-height: 5rem;
   }
 
   &__input {

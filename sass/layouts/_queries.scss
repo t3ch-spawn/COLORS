@@ -198,6 +198,10 @@
       flex-direction: column;
       align-items: flex-start;
     }
+
+    &__left {
+      margin-bottom: 3rem;
+    }
     &__right {
       flex-direction: column;
       align-items: flex-start;
@@ -216,9 +220,8 @@
 }
 
 @media screen and (max-width: 750px) {
-  // .navigation__list {
-  //   display: none;
-  // }
+  /////////////////////////
+  // SUB-HEADINGS QUERY
 
   /////////////////////
   /// HERO QUERY
@@ -293,6 +296,181 @@
       & > *:not(:last-child) {
         margin-right: -7rem;
       }
+    }
+  }
+
+  ///////////////////////
+  // SUBSCRIBE QUERY
+  .subscribe {
+    &__sub-heading {
+      text-align: center;
+    }
+
+    &__descrip {
+      text-align: center;
+    }
+
+    &__input-box {
+      width: 100%;
+    }
+
+    &__input {
+      width: 60%;
+    }
+
+    &__btn {
+      font-size: 1.8rem;
+      width: 40%;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  // NAVIGATION QUERY
+  .navigation {
+    &__right.active {
+      width: 65%;
+    }
+
+    &__right.active ~ &__hamburger {
+      right: 50%;
+    }
+
+    &__link {
+      font-size: 1.7rem;
+    }
+
+    &__cta {
+      width: 15rem;
+    }
+  }
+
+  ////////////////////////////
+  // ABOUT QUERY
+  .about {
+    &__image {
+      img {
+        height: 35rem;
+      }
+    }
+
+    &__text-container {
+      display: flex;
+      flex-direction: column-reverse;
+
+      .about__sub-heading {
+        margin-top: 3rem;
+      }
+
+      .about__descrip {
+        margin-top: 0rem;
+      }
+    }
+
+    &__sub-heading {
+      font-size: 3.6rem;
+    }
+
+    &__descrip {
+      width: 100%;
+      font-size: 1.7rem;
+    }
+  }
+
+  /////////////////////////
+  // POPULAR WEEK QUERY
+  .popularWeek {
+    &__main-img {
+      // margin-bottom: 5rem;
+
+      img {
+        height: 35rem;
+      }
+    }
+  }
+
+  ///////////////////////
+  // SUBSCRIBE QUERY
+  .subscribe {
+    &__sub-heading {
+      font-size: 2.6rem;
+    }
+    &__input-box {
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      & > *:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    &__input {
+      width: 100%;
+      height: 4rem;
+    }
+
+    &__btn {
+      font-size: 1.8rem;
+      width: 40%;
+      height: 4rem;
+      border-radius: 1rem;
+    }
+  }
+
+  .gallery {
+    display: none;
+  }
+
+  .hero {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .navigation {
+    &__right.active {
+      width: 75%;
+    }
+
+    &__right.active ~ &__hamburger {
+      right: 55%;
+    }
+  }
+
+  ////////////////////////////
+  // ABOUT QUERY
+  .about {
+    &__image {
+      img {
+        height: 30rem;
+      }
+    }
+  }
+
+  /////////////////////////
+  // POPULAR WEEK QUERY
+  .popularWeek {
+    &__main-img {
+      // margin-bottom: 5rem;
+
+      img {
+        height: 30rem;
+      }
+    }
+  }
+
+  /////////////////
+  // SUBSCRIBE HEADING
+  .subscribe {
+    &__sub-heading {
+      font-size: 2rem;
+    }
+
+    &__descrip {
+      font-size: 1.5rem;
+      text-align: center;
     }
   }
 }
