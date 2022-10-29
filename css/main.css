@@ -661,6 +661,7 @@ header {
   font-size: 2.4rem;
   font-weight: 600;
   width: 20%;
+  cursor: pointer;
 }
 .navigation__right {
   display: flex;
@@ -746,9 +747,8 @@ header {
 }
 .navigation__hamburger {
   display: none;
-  height: 3rem;
-  width: 3rem;
-  border: 1px solid black;
+  height: 2.8rem;
+  width: 2.8rem;
 }
 
 @media screen and (max-width: 1000px) {
@@ -784,12 +784,41 @@ header {
     padding: 2rem 0;
   }
   .navigation__hamburger {
-    display: block;
+    display: flex;
     position: relative;
+    justify-content: center;
+    align-items: center;
     right: 1rem;
-    transition: 0.4s cubic-bezier(0.41, 1.8, 0.55, 1);
+    transition: 0.8s cubic-bezier(0.41, 1.8, 0.55, 1);
     z-index: 55;
     cursor: pointer;
+    flex-direction: column;
+  }
+  .navigation__hamburger > *:not(:last-child) {
+    margin-bottom: 5px;
+  }
+  .navigation__hamburger .bars {
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+    height: 3px;
+    position: relative;
+    transition: 0.9s;
+  }
+  .navigation__hamburger .bar-2 {
+    transform: translateX(8px);
+    transition: 1s;
+  }
+  .navigation__right.active ~ .navigation__hamburger .bar-1 {
+    transform: translateY(8px) rotate(135deg);
+  }
+  .navigation__right.active ~ .navigation__hamburger .bar-2 {
+    opacity: 0;
+    transform: translateX(-8px) translateY(-7px);
+    transition: 0.3s;
+  }
+  .navigation__right.active ~ .navigation__hamburger .bar-3 {
+    transform: translateY(-8px) rotate(-135deg);
   }
   .navigation__item {
     overflow: hidden;
@@ -811,7 +840,7 @@ header {
     padding: 5rem;
     opacity: 0;
     pointer-events: none;
-    transition: 0.5s cubic-bezier(0.41, 1.8, 0.55, 1);
+    transition: 1s cubic-bezier(0.41, 1.8, 0.55, 1);
   }
   .navigation__list {
     flex-direction: column;
@@ -856,6 +885,25 @@ header {
   }
   .about__image--1 {
     margin-bottom: 3rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .footer {
+    align-items: flex-start;
+  }
+  .footer__content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer__right {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer__right > *:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+  .footer__list > *:not(:last-child) {
+    margin-bottom: 1rem;
   }
 }
 @media screen and (max-width: 750px) {

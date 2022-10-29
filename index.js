@@ -42,7 +42,7 @@ hamburger.addEventListener("click", () => {
       .from(".navigation__cta", {
         x: 70,
         opacity: 0,
-        duration: 0.7,
+        duration: 0.5,
         ease: "back",
       });
   }

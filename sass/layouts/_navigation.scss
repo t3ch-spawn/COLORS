@@ -20,6 +20,7 @@ header {
     font-size: 2.4rem;
     font-weight: 600;
     width: 20%;
+    cursor: pointer;
   }
 
   &__right {
@@ -123,8 +124,7 @@ header {
   // hmaburger menu
   &__hamburger {
     display: none;
-    height: 3rem;
-    width: 3rem;
-    border: 1px solid black;
+    height: 2.8rem;
+    width: 2.8rem;
   }
 }
