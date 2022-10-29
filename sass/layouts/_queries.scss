@@ -156,11 +156,20 @@
   /////////////////////
   /// HERO QUERY
   .hero {
-    &__heading {
-      font-size: 8rem;
+    & > *:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+
+    &__typography {
+      width: 100%;
+    }
+
+    &__descrip {
+      width: 100%;
     }
 
     &__image {
+      border-radius: 7px 7px 9rem 7px;
       img {
         height: 40rem;
       }
@@ -188,6 +197,48 @@
 }
 
 @media screen and (max-width: 800px) {
+  ////////////////////
+  // HERO QUERY
+  .hero {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 4rem;
+    align-items: flex-start;
+
+    &__sub-heading {
+      margin-bottom: 2.5rem;
+    }
+
+    &__heading {
+      font-size: 8rem;
+      margin-bottom: 2.5rem;
+    }
+
+    &__descrip {
+      width: 100%;
+    }
+
+    & > *:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 3rem;
+    }
+    &__typography {
+      width: 100%;
+    }
+
+    &__image {
+      width: 100%;
+      border-radius: 7px 7px 9rem 7px;
+    }
+  }
+
+  /////////////////////////
+  /// ABOUT QUERY
+  .about {
+    margin-top: $section-margin;
+  }
+
   //////////////////
   //FOOTER QUERY
 
@@ -201,6 +252,7 @@
 
     &__left {
       margin-bottom: 3rem;
+      width: 100%;
     }
     &__right {
       flex-direction: column;
@@ -220,16 +272,15 @@
 }
 
 @media screen and (max-width: 750px) {
-  /////////////////////////
-  // SUB-HEADINGS QUERY
+  // ABOUT US QUERY
+  .about {
+    &__content {
+      width: 100%;
+    }
 
-  /////////////////////
-  /// HERO QUERY
-  .hero {
-    &__image {
-      img {
-        height: 30rem;
-      }
+    &__column1,
+    &__column2 {
+      width: 80%;
     }
   }
 
@@ -272,7 +323,7 @@
   }
 
   //////////////////////
-  /// POPULAR WEEK QUERY\
+  /// GALLERY QUERY\
   .gallery {
     &__images-container {
       flex-direction: column;
@@ -345,12 +396,39 @@
     }
   }
 
+  ///////////////////////////
+
+  // HERO QUERY
+  .hero {
+    &__heading {
+      font-size: 6rem;
+    }
+
+    &__cta {
+      width: 100%;
+
+      font-size: 2rem;
+    }
+  }
+
   ////////////////////////////
   // ABOUT QUERY
   .about {
     &__image {
       img {
         height: 35rem;
+      }
+    }
+
+    &__column1,
+    &__column2 {
+      padding: 3rem;
+      width: 100%;
+
+      .about__descrip {
+        width: 100%;
+        font-size: 1.7rem;
+        margin-bottom: 0rem;
       }
     }
 
@@ -372,7 +450,6 @@
     }
 
     &__descrip {
-      width: 100%;
       font-size: 1.7rem;
     }
   }
@@ -413,7 +490,7 @@
 
     &__btn {
       font-size: 1.8rem;
-      width: 40%;
+      width: 50%;
       height: 4rem;
       border-radius: 1rem;
     }
@@ -423,9 +500,9 @@
     display: none;
   }
 
-  .hero {
-    display: none;
-  }
+  // .hero {
+  //   display: none;
+  // }
 }
 
 @media screen and (max-width: 400px) {
@@ -436,6 +513,20 @@
 
     &__right.active ~ &__hamburger {
       right: 55%;
+    }
+  }
+
+  /////////////////////
+  /// HERO QUERY
+  .hero {
+    &__image {
+      img {
+        height: 30rem;
+      }
+    }
+
+    &__cta {
+      font-size: 1.8rem;
     }
   }
 
@@ -464,6 +555,10 @@
   /////////////////
   // SUBSCRIBE HEADING
   .subscribe {
+    &__content {
+      padding: 5rem 3rem;
+    }
+
     &__sub-heading {
       font-size: 2rem;
     }
@@ -471,6 +566,10 @@
     &__descrip {
       font-size: 1.5rem;
       text-align: center;
+    }
+
+    &__btn {
+      width: 65%;
     }
   }
 }
