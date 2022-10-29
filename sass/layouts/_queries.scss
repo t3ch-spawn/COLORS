@@ -133,6 +133,10 @@
       width: 50%;
       pointer-events: all;
     }
+
+    &__cta {
+      width: 14rem;
+    }
   }
 
   .overlay {
@@ -192,6 +196,14 @@
 
     &__image--1 {
       margin-bottom: 3rem;
+    }
+  }
+
+  ////////////////////
+  /// FOOTER QUERY
+  .footer {
+    &__rights {
+      font-size: 1.4rem;
     }
   }
 }
@@ -282,6 +294,10 @@
     &__column2 {
       width: 80%;
     }
+
+    &__sub-heading {
+      font-size: 4.7rem;
+    }
   }
 
   //////////////////////
@@ -354,11 +370,11 @@
   // SUBSCRIBE QUERY
   .subscribe {
     &__sub-heading {
-      text-align: center;
+      text-align: left;
     }
 
     &__descrip {
-      text-align: center;
+      text-align: left;
     }
 
     &__input-box {
@@ -389,10 +405,6 @@
 
     &__link {
       font-size: 1.7rem;
-    }
-
-    &__cta {
-      width: 15rem;
     }
   }
 
@@ -445,10 +457,6 @@
       }
     }
 
-    &__sub-heading {
-      font-size: 3.6rem;
-    }
-
     &__descrip {
       font-size: 1.7rem;
     }
@@ -475,8 +483,8 @@
     &__input-box {
       width: 100%;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      justify-content: flex-star5;
+      align-items: flex-star5;
 
       & > *:not(:last-child) {
         margin-bottom: 2rem;
@@ -485,13 +493,13 @@
 
     &__input {
       width: 100%;
-      height: 4rem;
+      height: 5rem;
     }
 
     &__btn {
       font-size: 1.8rem;
       width: 50%;
-      height: 4rem;
+      height: 5rem;
       border-radius: 1rem;
     }
   }
@@ -546,6 +554,12 @@
     &__main-img {
       // margin-bottom: 5rem;
 
+      img {
+        height: 30rem;
+      }
+    }
+
+    &__sub-img {
       img {
         height: 30rem;
       }

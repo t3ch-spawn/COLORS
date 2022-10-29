@@ -93,6 +93,10 @@ main {
 
   &__heading {
     @include subHeadingStyle;
+
+    span {
+      margin-left: 1rem;
+    }
   }
 
   &__content {
