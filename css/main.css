@@ -1163,6 +1163,9 @@ header {
   .hero__image img {
     height: 30rem;
   }
+  .hero__image {
+    border-radius: 7px 7px 6.9rem 7px;
+  }
   .hero__cta {
     font-size: 1.8rem;
   }
