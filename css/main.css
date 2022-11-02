@@ -1081,7 +1081,7 @@ header {
     font-size: 1.7rem;
   }
   .hero__heading {
-    font-size: 6rem;
+    font-size: 8rem;
   }
   .hero__cta {
     font-size: 1.4rem;
@@ -1160,6 +1160,9 @@ header {
   .navigation__right.active ~ .navigation__hamburger {
     right: 55%;
   }
+  .hero__heading {
+    font-size: 7.5rem;
+  }
   .hero__image img {
     height: 30rem;
   }
@@ -1192,6 +1195,9 @@ header {
   }
 }
 @media screen and (max-width: 300px) {
+  .hero__heading {
+    font-size: 6rem;
+  }
   .gallery__rectangle {
     height: 6.5rem;
     width: 20rem;

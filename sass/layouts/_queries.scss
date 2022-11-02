@@ -406,7 +406,7 @@
   // HERO QUERY
   .hero {
     &__heading {
-      font-size: 6rem;
+      font-size: 8rem;
     }
 
     &__cta {
@@ -534,6 +534,10 @@
   /////////////////////
   /// HERO QUERY
   .hero {
+    &__heading {
+      font-size: 7.5rem;
+    }
+
     &__image {
       img {
         height: 30rem;
@@ -599,6 +603,14 @@
 }
 
 @media screen and (max-width: 300px) {
+  /////////////////////////////
+  /// HERO QUERY
+  .hero {
+    &__heading {
+      font-size: 6rem;
+    }
+  }
+
   ////////////////////////////
   /// GALLERY QUERY
   .gallery {
