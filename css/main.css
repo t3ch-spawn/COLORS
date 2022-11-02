@@ -1039,16 +1039,19 @@ header {
     right: -6rem;
     top: -6rem;
   }
+  .gallery__images-container {
+    width: 90%;
+  }
   .gallery__rectangle {
-    height: 9rem;
+    height: 15rem;
     width: 20rem;
   }
   .gallery__rectangle img {
-    width: 80%;
-    height: 80%;
+    width: 90%;
+    height: 90%;
   }
   .gallery__images-container > *:not(:last-child) {
-    margin-right: -3rem;
+    margin-right: -4rem;
   }
   .subscribe__sub-heading {
     text-align: left;
@@ -1113,6 +1116,20 @@ header {
   .popularWeek__main-img img {
     height: 35rem;
   }
+  .gallery__images-container {
+    width: 95%;
+  }
+  .gallery__rectangle {
+    height: 10rem;
+    width: 20rem;
+  }
+  .gallery__rectangle img {
+    width: 90%;
+    height: 90%;
+  }
+  .gallery__images-container > *:not(:last-child) {
+    margin-right: -3rem;
+  }
   .subscribe__sub-heading {
     font-size: 2.6rem;
   }
@@ -1157,17 +1174,6 @@ header {
   }
   .popularWeek__sub-img img {
     height: 30rem;
-  }
-  .gallery__rectangle {
-    height: 7.7rem;
-    width: 20rem;
-  }
-  .gallery__rectangle img {
-    width: 90%;
-    height: 80%;
-  }
-  .gallery__images-container > *:not(:last-child) {
-    margin-right: -3rem;
   }
   .subscribe__content {
     padding: 5rem 3rem;
