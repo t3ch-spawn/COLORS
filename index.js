@@ -24,7 +24,7 @@ observer2.observe(gallery);
 const hamburger = document.querySelector(".navigation__hamburger");
 const navRight = document.querySelector(".navigation__right");
 const overlay = document.querySelector(".overlay");
-let has = false;
+const navLink = document.querySelectorAll(".navigation__link");
 
 hamburger.addEventListener("click", () => {
   navRight.classList.toggle("active");
@@ -46,6 +46,13 @@ hamburger.addEventListener("click", () => {
         ease: "back",
       });
   }
+});
+
+navLink.forEach((link) => {
+  link.addEventListener("click", () => {
+    navRight.classList.remove("active");
+    overlay.classList.remove("active");
+  });
 });
 
 overlay.addEventListener("click", () => {

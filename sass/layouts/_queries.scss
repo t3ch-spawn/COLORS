@@ -363,11 +363,11 @@
   // SUBSCRIBE QUERY
   .subscribe {
     &__sub-heading {
-      text-align: left;
+      text-align: center;
     }
 
     &__descrip {
-      text-align: left;
+      text-align: center;
     }
 
     &__input-box {
@@ -498,8 +498,8 @@
     &__input-box {
       width: 100%;
       flex-direction: column;
-      justify-content: flex-star5;
-      align-items: flex-star5;
+      justify-content: center;
+      align-items: center;
 
       & > *:not(:last-child) {
         margin-bottom: 2rem;

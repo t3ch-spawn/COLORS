@@ -1054,10 +1054,10 @@ header {
     margin-right: -4rem;
   }
   .subscribe__sub-heading {
-    text-align: left;
+    text-align: center;
   }
   .subscribe__descrip {
-    text-align: left;
+    text-align: center;
   }
   .subscribe__input-box {
     width: 100%;
@@ -1136,8 +1136,8 @@ header {
   .subscribe__input-box {
     width: 100%;
     flex-direction: column;
-    justify-content: flex-star5;
-    align-items: flex-star5;
+    justify-content: center;
+    align-items: center;
   }
   .subscribe__input-box > *:not(:last-child) {
     margin-bottom: 2rem;
