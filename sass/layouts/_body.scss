@@ -90,6 +90,7 @@ main {
   justify-content: center;
   align-items: center;
   width: 100%;
+  line-height: 3.5rem;
 
   &__heading {
     @include subHeadingStyle;
@@ -492,7 +493,7 @@ main {
 
   &__sub-heading {
     font-size: 3rem;
-    font-weight: 400;
+    font-weight: 500;
   }
 
   &__descrip {

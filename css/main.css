@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 main {
   width: 100%;
   display: flex;
@@ -81,6 +81,7 @@ main {
   justify-content: center;
   align-items: center;
   width: 100%;
+  line-height: 3.5rem;
 }
 .about__heading {
   margin-bottom: 5rem;
@@ -501,7 +502,7 @@ main {
 }
 .subscribe__sub-heading {
   font-size: 3rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 .subscribe__descrip {
   font-size: 1.8rem;
@@ -1197,6 +1198,9 @@ header {
 @media screen and (max-width: 300px) {
   .hero__heading {
     font-size: 6rem;
+  }
+  .about {
+    line-height: 3rem;
   }
   .gallery__rectangle {
     height: 6.5rem;
