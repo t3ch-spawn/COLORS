@@ -1040,8 +1040,8 @@ header {
     top: -6rem;
   }
   .gallery__rectangle {
-    height: 8rem;
-    width: 15rem;
+    height: 9rem;
+    width: 20rem;
   }
   .gallery__rectangle img {
     width: 80%;
@@ -1159,12 +1159,12 @@ header {
     height: 30rem;
   }
   .gallery__rectangle {
-    height: 6.7rem;
-    width: 15rem;
+    height: 7.7rem;
+    width: 20rem;
   }
   .gallery__rectangle img {
-    width: 75%;
-    height: 75%;
+    width: 90%;
+    height: 80%;
   }
   .gallery__images-container > *:not(:last-child) {
     margin-right: -3rem;
@@ -1184,12 +1184,12 @@ header {
 }
 @media screen and (max-width: 300px) {
   .gallery__rectangle {
-    height: 6rem;
-    width: 15rem;
+    height: 6.5rem;
+    width: 20rem;
   }
   .gallery__rectangle img {
-    width: 85%;
-    height: 70%;
+    width: 90%;
+    height: 80%;
   }
   .gallery__images-container > *:not(:last-child) {
     margin-right: -2rem;
