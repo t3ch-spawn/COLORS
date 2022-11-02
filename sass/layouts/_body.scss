@@ -335,17 +335,6 @@ main {
     }
   }
 
-  &__section-1,
-  &__section-2 {
-    display: flex;
-    // width: 100%;
-
-    // make-shift gap for children
-    & > *:not(:last-child) {
-      margin-right: -10rem;
-    }
-  }
-
   // outer-rectangle with background-color
   &__rectangle {
     display: flex;
