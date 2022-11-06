@@ -22,6 +22,7 @@ main {
     text-align: left;
     flex-direction: column;
     align-items: flex-start;
+    animation: moveFromLeft 1s;
   }
 
   &__sub-heading {
@@ -52,6 +53,9 @@ main {
     border-radius: 7px 7px 13rem 0px;
     // overflow: hidden;
     height: fit-content;
+    animation: moveFromBottom 1s;
+    animation-delay: 0.3s;
+    animation-fill-mode: backwards;
 
     img {
       height: 55rem;

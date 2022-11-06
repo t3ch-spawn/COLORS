@@ -1,4 +1,44 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@-webkit-keyframes moveFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-400px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-400px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes moveFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(400px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes moveFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(400px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 main {
   width: 100%;
   display: flex;
@@ -22,6 +62,8 @@ main {
   text-align: left;
   flex-direction: column;
   align-items: flex-start;
+  -webkit-animation: moveFromLeft 1s;
+          animation: moveFromLeft 1s;
 }
 .hero__sub-heading {
   font-size: 2.4rem;
@@ -49,6 +91,12 @@ main {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  -webkit-animation: moveFromBottom 1s;
+          animation: moveFromBottom 1s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
 }
 .hero__image img {
   height: 55rem;
@@ -1009,9 +1057,13 @@ header {
   }
   .hero__typography {
     width: 100%;
+    -webkit-animation: none;
+            animation: none;
   }
   .hero__image {
     border-radius: 7px 7px 9rem 7px;
+    -webkit-animation: none;
+            animation: none;
   }
   .about {
     margin-top: 12rem;

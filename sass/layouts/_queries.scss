@@ -251,10 +251,12 @@
     }
     &__typography {
       width: 100%;
+      animation: none;
     }
 
     &__image {
       border-radius: 7px 7px 9rem 7px;
+      animation: none;
     }
   }
 
