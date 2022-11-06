@@ -15,9 +15,10 @@
     }
 
     &__column1 {
-      align-items: flex-end;
       margin-right: 0;
-      text-align: right;
+      text-align: left;
+      // align-items: flex-end;
+      // text-align: right;
     }
 
     &__column2 {
@@ -197,6 +198,19 @@
     &__image--1 {
       margin-bottom: 3rem;
     }
+
+    &__text-container {
+      display: flex;
+      flex-direction: column-reverse;
+
+      .about__sub-heading {
+        margin-top: 3rem;
+      }
+
+      .about__descrip {
+        margin-top: 0rem;
+      }
+    }
   }
 
   ////////////////////
@@ -311,7 +325,12 @@
     }
 
     &__column1 {
-      align-items: flex-end;
+      // align-items: flex-end;
+      align-items: flex-start;
+
+      .popularWeek__sub-img {
+        padding: 5rem 0rem 0rem 0rem;
+      }
     }
 
     &__column2 {
@@ -321,6 +340,10 @@
 
     &__sub-img {
       padding: 5rem 0rem;
+
+      img {
+        height: 45rem;
+      }
     }
 
     &__img-container {
@@ -437,6 +460,10 @@
       }
     }
 
+    &__sub-heading {
+      font-size: 4rem;
+    }
+
     &__text-container {
       display: flex;
       flex-direction: column-reverse;
@@ -459,6 +486,13 @@
   // POPULAR WEEK QUERY
   .popularWeek {
     &__main-img {
+      // margin-bottom: 5rem;
+
+      img {
+        height: 35rem;
+      }
+    }
+    &__sub-img {
       // margin-bottom: 5rem;
 
       img {
@@ -494,12 +528,18 @@
   .subscribe {
     &__sub-heading {
       font-size: 2.6rem;
+      text-align: left;
     }
+
+    &__descrip {
+      text-align: left;
+    }
+
     &__input-box {
       width: 100%;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      justify-content: flex-start;
+      align-items: flex-start;
 
       & > *:not(:last-child) {
         margin-bottom: 2rem;
@@ -608,6 +648,10 @@
   .hero {
     &__heading {
       font-size: 6rem;
+    }
+
+    &__descrip {
+      line-height: 3rem;
     }
   }
 

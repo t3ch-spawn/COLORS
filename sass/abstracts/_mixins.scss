@@ -11,7 +11,7 @@
   margin-bottom: $heading-margin-bottom;
   text-transform: uppercase;
   font-weight: 400;
-  font-size: 6.4rem;
+  font-size: 5.4rem;
   text-align: center;
 
   span {
@@ -19,12 +19,12 @@
   }
 
   @media screen and (max-width: 850px) {
-    font-size: 5.5rem;
+    font-size: 4.5rem;
   }
   @media screen and (max-width: 750px) {
-    font-size: 5rem;
+    font-size: 4rem;
   }
-  // @media screen and (max-width: 400px) {
-  //   font-size: 3.6rem;
-  // }
+  @media screen and (max-width: 400px) {
+    font-size: 3.6rem;
+  }
 }
