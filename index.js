@@ -33,7 +33,6 @@ hamburger.addEventListener("click", () => {
   if (navRight.classList.contains("active")) {
     gsap
       .timeline()
-
       .from(".navigation__item-container", {
         duration: 1,
         y: 40,
@@ -59,3 +58,20 @@ overlay.addEventListener("click", () => {
   navRight.classList.remove("active");
   overlay.classList.remove("active");
 });
+
+/////////////////////////
+/////////////////////////
+// ANIMATION FOR HERO SECTION
+gsap
+  .timeline()
+  .from(".hero__typography", {
+    opacity: 0,
+    x: -500,
+    duration: 1,
+  })
+  .from(".hero__image", {
+    opacity: 0,
+    y: 400,
+    delay: -0.5,
+    duration: 1,
+  });
