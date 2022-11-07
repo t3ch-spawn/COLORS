@@ -1040,6 +1040,8 @@ header {
     margin: 0;
     padding: 4rem;
     align-items: flex-start;
+    -webkit-animation: moveFromBottom 1s;
+            animation: moveFromBottom 1s;
   }
   .hero__sub-heading {
     margin-bottom: 2.5rem;

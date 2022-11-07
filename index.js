@@ -1,10 +1,12 @@
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
+  console.log(entries);
+  entries.forEach((entry, idx) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("show");
     }
   });
 });
+
 const observer2 = new IntersectionObserver((entries2) => {
   entries2.forEach((entry2) => {
     if (entry2.isIntersecting) {
@@ -13,6 +15,34 @@ const observer2 = new IntersectionObserver((entries2) => {
       });
     }
   });
+});
+
+let wordShown = false;
+const wordAnim = new SplitType(".word__anim");
+const observerWords = new IntersectionObserver((entriesWords) => {
+  entriesWords.forEach((entryWord) => {
+    if (entryWord.isIntersecting && !wordShown) {
+      gsap.from(wordAnim.words, {
+        y: "100%",
+        opacity: 0,
+        stagger: 0.04,
+      });
+      wordShown = true;
+    }
+  });
+});
+
+if (wordShown) {
+  gsap.to(wordAnim.words, {
+    y: 0,
+    opacity: 1,
+    stagger: 0,
+  });
+}
+
+const paragraphs = document.querySelectorAll(".word__anim");
+paragraphs.forEach((paragraph) => {
+  observerWords.observe(paragraph);
 });
 
 const pageSections = document.querySelectorAll(".section");
@@ -62,6 +92,15 @@ overlay.addEventListener("click", () => {
 /////////////////////////
 /////////////////////////
 // ANIMATION FOR HERO SECTION
+
+const myText = new SplitType(".hero__descrip");
+gsap.from(myText.words, {
+  y: "100%",
+  opacity: 0,
+  stagger: 0.04,
+  // delay: 0.5,
+});
+
 // gsap
 //   .timeline()
 //   .from(".hero__typography", {

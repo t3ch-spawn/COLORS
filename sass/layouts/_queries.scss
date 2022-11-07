@@ -231,6 +231,7 @@
     margin: 0;
     padding: 4rem;
     align-items: flex-start;
+    animation: moveFromBottom 1s;
 
     &__sub-heading {
       margin-bottom: 2.5rem;
