@@ -1,5 +1,4 @@
 const observer = new IntersectionObserver((entries) => {
-  console.log(entries);
   entries.forEach((entry, idx) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("show");
@@ -16,31 +15,74 @@ const observer2 = new IntersectionObserver((entries2) => {
     }
   });
 });
+const paragraphs = document.querySelectorAll(".paragraph__anim");
+let realParagraph;
+let realWordAnim;
 
-let wordShown = false;
-const wordAnim = new SplitType(".word__anim");
-const observerWords = new IntersectionObserver((entriesWords) => {
-  entriesWords.forEach((entryWord) => {
-    if (entryWord.isIntersecting && !wordShown) {
-      gsap.from(wordAnim.words, {
-        y: "100%",
-        opacity: 0,
-        stagger: 0.04,
-      });
-      wordShown = true;
+// realWordAnim = new SplitType(".word__anim");
+
+// gsap.registerPlugin(ScrollTrigger);
+
+// gsap.from(realWordAnim, {
+//   scrollTrigger: realWordAnim,
+//   y: "100%",
+//   opacity: 0,
+//   stagger: 0.04,
+// });
+
+const handleIntersection = (entries) => {
+  entries.map((entry) => {
+    realParagraph = entry.target.querySelector(".word__anim");
+    realWordAnim = new SplitType(realParagraph);
+
+    console.log(realParagraph);
+    const tl = gsap.timeline();
+
+    tl.from(realWordAnim.words, {
+      y: "100%",
+      opacity: 0,
+      stagger: 0.04,
+    });
+
+    if (entry.isIntersecting) {
+      tl.play(0);
+    } else {
+      tl.reverse();
     }
   });
+};
+
+const observerWords = new IntersectionObserver(handleIntersection, {
+  threshold: 0.5,
 });
+// console.log(entriesWords);
 
-if (wordShown) {
-  gsap.to(wordAnim.words, {
-    y: 0,
-    opacity: 1,
-    stagger: 0,
-  });
-}
+// entriesWords.forEach((entryWord) => {
+//   console.log(entryWord);
 
-const paragraphs = document.querySelectorAll(".word__anim");
+//   realParagraph = entryWord.target.querySelector(".word__anim");
+
+//   realWordAnim = new SplitType(realParagraph);
+
+//   if (entryWord.isIntersecting && !wordShown) {
+//     gsap.from(realWordAnim.words, {
+//       y: "100%",
+//       opacity: 0,
+//       stagger: 0.04,
+//     });
+
+//     wordShown = false;
+//   }
+// });
+
+// if (wordShown) {
+//   gsap.to(realWordAnim.words, {
+//     y: 0,
+//     opacity: 1,
+//     stagger: 0,
+//   });
+// }
+
 paragraphs.forEach((paragraph) => {
   observerWords.observe(paragraph);
 });

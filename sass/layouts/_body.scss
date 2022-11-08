@@ -120,7 +120,7 @@ main {
     margin-right: 2.5rem;
 
     .about__descrip {
-      width: 85%;
+      width: 100%;
       font-size: 2rem;
       margin-bottom: 7rem;
     }
@@ -133,7 +133,7 @@ main {
     width: fit-content;
 
     .about__descrip {
-      width: 85%;
+      width: 100%;
       font-size: 2rem;
       margin-bottom: 3rem;
     }
@@ -169,6 +169,12 @@ main {
   &__descrip {
     width: 85%;
     font-size: 2rem;
+  }
+
+  .paragraph__anim {
+    margin: 0;
+    padding: 0;
+    width: 100%;
   }
 }
 
