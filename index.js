@@ -16,8 +16,48 @@ const observer2 = new IntersectionObserver((entries2) => {
   });
 });
 const paragraphs = document.querySelectorAll(".paragraph__anim");
-let realParagraph;
-let realWordAnim;
+const aboutDescrip1 = document.querySelector(".about__descrip-1");
+const aboutDescrip2 = document.querySelector(".about__descrip-2");
+const about1 = new SplitType(".about__descrip-1");
+const about2 = new SplitType(".about__descrip-2");
+let about1Shown = false;
+let about2Shown = false;
+
+const observeAbout1 = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    const tl = gsap.timeline();
+    if (entry.isIntersecting && !about1Shown) {
+      tl.from(about1.words, {
+        y: "100%",
+        opacity: 0,
+        stagger: 0.04,
+        delay: 0.5,
+      });
+
+      about1Shown = true;
+    }
+  });
+});
+
+const observeAbout2 = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    const tl = gsap.timeline();
+
+    if (entry.isIntersecting && !about2Shown) {
+      tl.from(about2.words, {
+        y: "100%",
+        opacity: 0,
+        stagger: 0.04,
+        delay: 0.5,
+      });
+
+      about2Shown = true;
+    }
+  });
+});
+
+observeAbout1.observe(aboutDescrip1);
+observeAbout2.observe(aboutDescrip2);
 
 // realWordAnim = new SplitType(".word__anim");
 
@@ -30,31 +70,31 @@ let realWordAnim;
 //   stagger: 0.04,
 // });
 
-const handleIntersection = (entries) => {
-  entries.map((entry) => {
-    realParagraph = entry.target.querySelector(".word__anim");
-    realWordAnim = new SplitType(realParagraph);
+// const handleIntersection = (entries) => {
+//   entries.map((entry) => {
+//     realParagraph = entry.target.querySelector(".word__anim");
+//     realWordAnim = new SplitType(realParagraph);
 
-    console.log(realParagraph);
-    const tl = gsap.timeline();
+//     console.log(realParagraph);
+//     const tl = gsap.timeline();
 
-    tl.from(realWordAnim.words, {
-      y: "100%",
-      opacity: 0,
-      stagger: 0.04,
-    });
+//     tl.from(realWordAnim.words, {
+//       y: "100%",
+//       opacity: 0,
+//       stagger: 0.04,
+//     });
 
-    if (entry.isIntersecting) {
-      tl.play(0);
-    } else {
-      tl.reverse();
-    }
-  });
-};
+//     if (entry.isIntersecting) {
+//       tl.play(0);
+//     } else {
+//       tl.reverse();
+//     }
+//   });
+// };
 
-const observerWords = new IntersectionObserver(handleIntersection, {
-  threshold: 0.5,
-});
+// const observerWords = new IntersectionObserver(handleIntersection, {
+//   threshold: 0.5,
+// });
 // console.log(entriesWords);
 
 // entriesWords.forEach((entryWord) => {
@@ -83,9 +123,9 @@ const observerWords = new IntersectionObserver(handleIntersection, {
 //   });
 // }
 
-paragraphs.forEach((paragraph) => {
-  observerWords.observe(paragraph);
-});
+// paragraphs.forEach((paragraph) => {
+//   observerWords.observe(paragraph);
+// });
 
 const pageSections = document.querySelectorAll(".section");
 const imgContains = document.querySelectorAll(".img-contain");
@@ -136,23 +176,10 @@ overlay.addEventListener("click", () => {
 // ANIMATION FOR HERO SECTION
 
 const myText = new SplitType(".hero__descrip");
+0;
 gsap.from(myText.words, {
   y: "100%",
   opacity: 0,
   stagger: 0.04,
-  // delay: 0.5,
+  delay: 0.5,
 });
-
-// gsap
-//   .timeline()
-//   .from(".hero__typography", {
-//     opacity: 0,
-//     x: -500,
-//     duration: 1,
-//   })
-//   .from(".hero__image", {
-//     opacity: 0,
-//     y: 400,
-//     delay: -0.5,
-//     duration: 1,
-//   });
