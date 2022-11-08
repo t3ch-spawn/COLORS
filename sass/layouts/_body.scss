@@ -42,6 +42,7 @@ main {
     font-size: 1.6rem;
     line-height: 3.5rem;
     width: 90%;
+    text-justify: justify;
   }
 
   &__image {
@@ -169,6 +170,7 @@ main {
   &__descrip {
     width: 85%;
     font-size: 2rem;
+    text-align: left;
   }
 
   .paragraph__anim {
