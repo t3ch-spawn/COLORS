@@ -80,7 +80,6 @@ main {
   font-size: 1.6rem;
   line-height: 3.5rem;
   width: 90%;
-  text-justify: justify;
 }
 .hero__image {
   background-color: rgba(255, 127, 80, 0.5);
@@ -225,7 +224,6 @@ main {
 .about__descrip {
   width: 85%;
   font-size: 2rem;
-  text-align: left;
 }
 .about .paragraph__anim {
   margin: 0;
