@@ -137,6 +137,7 @@ const hamburger = document.querySelector(".navigation__hamburger");
 const navRight = document.querySelector(".navigation__right");
 const overlay = document.querySelector(".overlay");
 const navLink = document.querySelectorAll(".navigation__link");
+const navCtaLink = document.querySelector(".navigation__cta-link");
 
 hamburger.addEventListener("click", () => {
   navRight.classList.toggle("active");
@@ -164,6 +165,11 @@ navLink.forEach((link) => {
     navRight.classList.remove("active");
     overlay.classList.remove("active");
   });
+});
+
+navCtaLink.addEventListener("click", () => {
+  navRight.classList.remove("active");
+  overlay.classList.remove("active");
 });
 
 overlay.addEventListener("click", () => {
