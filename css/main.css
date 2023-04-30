@@ -59,6 +59,7 @@ main {
   line-height: 3.5rem;
   width: 90%;
   display: flex;
+  min-height: 140px;
 }
 .hero__image {
   background-color: rgba(255, 127, 80, 0.5);

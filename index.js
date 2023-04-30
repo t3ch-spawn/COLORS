@@ -56,10 +56,23 @@ const observeAbout2 = new IntersectionObserver((entries) => {
   });
 });
 
-observeAbout1.observe(aboutDescrip1);
-observeAbout2.observe(aboutDescrip2);
+// observeAbout1.observe(aboutDescrip1);
+// observeAbout2.observe(aboutDescrip2);
 
 gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(about1.words, {
+  y: "100%",
+  opacity: 0,
+  stagger: 0.04,
+  scrollTrigger: ".about__descrip-1",
+});
+gsap.from(about2.words, {
+  y: "100%",
+  opacity: 0,
+  stagger: 0.04,
+  scrollTrigger: ".about__descrip-2",
+});
 
 // GSAP FOR ANIMATIONS ON LOAD
 
@@ -120,10 +133,7 @@ const navLink = document.querySelectorAll(".navigation__link");
 const navCtaLink = document.querySelector(".navigation__cta-link");
 let navOpen = false;
 
-// hamburger animation
-hamburger.addEventListener("click", () => {
-  navRight.classList.toggle("active");
-  overlay.classList.toggle("active");
+function toggleNav() {
   let burgerPos;
   let navWidth;
 
@@ -136,8 +146,9 @@ hamburger.addEventListener("click", () => {
   } else if (window.screen.width <= 850) {
     burgerPos = "40%";
     navWidth = "50%";
-  } else {
-    navWidth = "80%";
+  } else if (window.screen.width > 850) {
+    navWidth = "60%";
+    burgerPos = "50%";
   }
 
   gsap.to(".navigation__hamburger", {
@@ -199,25 +210,33 @@ hamburger.addEventListener("click", () => {
   if (!navRight.classList.contains("active")) {
     navOpen = false;
   }
+}
 
-  console.log(navOpen);
+// hamburger animation
+hamburger.addEventListener("click", () => {
+  navRight.classList.toggle("active");
+  overlay.classList.toggle("active");
+  toggleNav();
 });
 
 navLink.forEach((link) => {
   link.addEventListener("click", () => {
     navRight.classList.remove("active");
     overlay.classList.remove("active");
+    toggleNav();
   });
 });
 
 navCtaLink.addEventListener("click", () => {
   navRight.classList.remove("active");
   overlay.classList.remove("active");
+  toggleNav();
 });
 
 overlay.addEventListener("click", () => {
   navRight.classList.remove("active");
   overlay.classList.remove("active");
+  toggleNav();
 });
 
 /////////////////////////
@@ -225,16 +244,13 @@ overlay.addEventListener("click", () => {
 // ANIMATION FOR HERO SECTION
 
 const myText = new SplitType(".hero__descrip");
-0;
+
 gsap.from(myText.words, {
   y: "100%",
   opacity: 0,
   stagger: 0.04,
-  delay: 0.5,
   scrollTrigger: ".hero__descrip",
 });
-
-console.log(window.screen.width);
 
 // realWordAnim = new SplitType(".word__anim");
 // gsap.registerPlugin(ScrollTrigger);
