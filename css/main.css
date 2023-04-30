@@ -1138,10 +1138,10 @@ header {
 }
 @media screen and (max-width: 500px) {
   .navigation__right.active {
-    width: 65%;
+    width: 65% !important;
   }
   .navigation__right.active ~ .navigation__hamburger {
-    right: 50%;
+    right: 50% !important;
   }
   .navigation__link {
     font-size: 1.7rem;

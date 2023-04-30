@@ -421,11 +421,11 @@
   // NAVIGATION QUERY
   .navigation {
     &__right.active {
-      width: 65%;
+      width: 65% !important;
     }
 
     &__right.active ~ &__hamburger {
-      right: 50%;
+      right: 50% !important;
     }
 
     &__link {

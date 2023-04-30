@@ -124,9 +124,24 @@ let navOpen = false;
 hamburger.addEventListener("click", () => {
   navRight.classList.toggle("active");
   overlay.classList.toggle("active");
+  let burgerPos;
+  let navWidth;
+
+  if (window.screen.width <= 400) {
+    burgerPos = "55%";
+    navWidth = "75%";
+  } else if (window.screen.width <= 500) {
+    burgerPos = "50%";
+    navWidth = "55%";
+  } else if (window.screen.width <= 850) {
+    burgerPos = "40%";
+    navWidth = "50%";
+  } else {
+    navWidth = "80%";
+  }
 
   gsap.to(".navigation__hamburger", {
-    right: "40%",
+    right: burgerPos,
   });
 
   if (navOpen) {
@@ -162,7 +177,7 @@ hamburger.addEventListener("click", () => {
       .timeline()
       .to(".navigation__right", {
         opacity: 1,
-        width: "50%",
+        width: navWidth,
       })
       .to(".navigation__item-container", {
         duration: 0.4,
@@ -218,6 +233,8 @@ gsap.from(myText.words, {
   delay: 0.5,
   scrollTrigger: ".hero__descrip",
 });
+
+console.log(window.screen.width);
 
 // realWordAnim = new SplitType(".word__anim");
 // gsap.registerPlugin(ScrollTrigger);
