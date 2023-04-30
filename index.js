@@ -70,7 +70,6 @@ gsap.from(".about", {
   duration: 1,
   ease: "ease",
   scrollTrigger: ".about",
-  filter: "blur(5px)",
 });
 
 // POPULAR WEEK LOAD
@@ -79,7 +78,6 @@ gsap.from(".popularWeek", {
   opacity: 0,
   duration: 1,
   scrollTrigger: ".popularWeek",
-  filter: "blur(5px)",
 });
 
 // MODELS LOAD
@@ -89,7 +87,6 @@ gsap.from(".models", {
   duration: 1,
   ease: "ease",
   scrollTrigger: ".models",
-  filter: "blur(5px)",
 });
 
 // GALLERY LOAD
@@ -99,7 +96,6 @@ gsap.from(".gallery", {
   duration: 1,
   ease: "ease",
   scrollTrigger: ".gallery",
-  filter: "blur(5px)",
 });
 
 // SUBSCRIBE LOAD
@@ -109,7 +105,6 @@ gsap.from(".subscribe", {
   duration: 1,
   ease: "ease",
   scrollTrigger: ".subscribe",
-  filter: "blur(5px)",
 });
 
 const pageSections = document.querySelectorAll(".section");
