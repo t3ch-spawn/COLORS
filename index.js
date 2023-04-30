@@ -118,26 +118,74 @@ const navRight = document.querySelector(".navigation__right");
 const overlay = document.querySelector(".overlay");
 const navLink = document.querySelectorAll(".navigation__link");
 const navCtaLink = document.querySelector(".navigation__cta-link");
+let navOpen = false;
 
+// hamburger animation
 hamburger.addEventListener("click", () => {
   navRight.classList.toggle("active");
   overlay.classList.toggle("active");
 
-  if (navRight.classList.contains("active")) {
+  gsap.to(".navigation__hamburger", {
+    right: "40%",
+  });
+
+  if (navOpen) {
     gsap
       .timeline()
-      .from(".navigation__item-container", {
-        duration: 1,
-        y: 40,
+      .to(".navigation__item-container", {
+        duration: 0.4,
+        y: 20,
         opacity: 0,
+        stagger: 0.15,
+        ease: "ease",
       })
-      .from(".navigation__cta", {
+      .to(".navigation__cta", {
         x: 70,
         opacity: 0,
         duration: 0.5,
         ease: "back",
+        delay: -0.1,
+      })
+      .to(".navigation__right", {
+        opacity: 0,
+        width: "0%",
+        delay: -0.5,
+      })
+      .to(".navigation__hamburger", {
+        right: "0%",
+        delay: -0.6,
       });
   }
+
+  if (navRight.classList.contains("active") && !navOpen) {
+    gsap
+      .timeline()
+      .to(".navigation__right", {
+        opacity: 1,
+        width: "50%",
+      })
+      .to(".navigation__item-container", {
+        duration: 0.4,
+        y: 0,
+        opacity: 1,
+        stagger: 0.15,
+        ease: "ease-in",
+      })
+      .to(".navigation__cta", {
+        x: 0,
+        opacity: 1,
+        duration: 0.5,
+        ease: "back",
+      });
+  }
+
+  navOpen = true;
+
+  if (!navRight.classList.contains("active")) {
+    navOpen = false;
+  }
+
+  console.log(navOpen);
 });
 
 navLink.forEach((link) => {

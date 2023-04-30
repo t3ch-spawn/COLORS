@@ -915,11 +915,11 @@ header {
   .navigation__right.active ~ .navigation__hamburger .bar-3 {
     transform: translateY(-8px) rotate(-135deg);
   }
+  .navigation__item-container {
+    transform: translateY(40px);
+  }
   .navigation__item {
     overflow: hidden;
-  }
-  .navigation__right.active ~ .navigation__hamburger {
-    right: 40%;
   }
   .navigation__right {
     position: fixed;
@@ -945,12 +945,12 @@ header {
     margin-bottom: 3.5rem;
   }
   .navigation__right.active {
-    opacity: 1;
-    width: 50%;
     pointer-events: all;
   }
   .navigation__cta {
     width: 14rem;
+    transform: translateX(70px);
+    opacity: 0;
   }
   .overlay {
     opacity: 0;

@@ -95,12 +95,16 @@
       transform: translateY(-8px) rotate(-135deg);
     }
 
+    &__item-container {
+      transform: translateY(40px);
+    }
+
     &__item {
       overflow: hidden;
     }
 
     &__right.active ~ &__hamburger {
-      right: 40%;
+      // right: 40%;
     }
 
     &__right {
@@ -130,13 +134,15 @@
     }
 
     &__right.active {
-      opacity: 1;
-      width: 50%;
+      // opacity: 1;
+      // width: 50%;
       pointer-events: all;
     }
 
     &__cta {
       width: 14rem;
+      transform: translateX(70px);
+      opacity: 0;
     }
   }
 
