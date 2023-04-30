@@ -31,7 +31,7 @@ const observeAbout1 = new IntersectionObserver((entries) => {
         y: "100%",
         opacity: 0,
         stagger: 0.04,
-        delay: 0.3,
+        // delay: 0.3,
       });
 
       about1Shown = true;
@@ -48,7 +48,7 @@ const observeAbout2 = new IntersectionObserver((entries) => {
         y: "100%",
         opacity: 0,
         stagger: 0.04,
-        delay: 0.3,
+        // delay: 0.3,
       });
 
       about2Shown = true;
@@ -70,6 +70,7 @@ gsap.from(".about", {
   duration: 1,
   ease: "ease",
   scrollTrigger: ".about",
+  filter: "blur(5px)",
 });
 
 // POPULAR WEEK LOAD
@@ -78,6 +79,7 @@ gsap.from(".popularWeek", {
   opacity: 0,
   duration: 1,
   scrollTrigger: ".popularWeek",
+  filter: "blur(5px)",
 });
 
 // MODELS LOAD
@@ -87,6 +89,7 @@ gsap.from(".models", {
   duration: 1,
   ease: "ease",
   scrollTrigger: ".models",
+  filter: "blur(5px)",
 });
 
 // GALLERY LOAD
@@ -96,6 +99,7 @@ gsap.from(".gallery", {
   duration: 1,
   ease: "ease",
   scrollTrigger: ".gallery",
+  filter: "blur(5px)",
 });
 
 // SUBSCRIBE LOAD
@@ -105,6 +109,7 @@ gsap.from(".subscribe", {
   duration: 1,
   ease: "ease",
   scrollTrigger: ".subscribe",
+  filter: "blur(5px)",
 });
 
 const pageSections = document.querySelectorAll(".section");
