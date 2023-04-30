@@ -1318,7 +1318,7 @@ body {
 }
 
 .section {
-  opacity: 1;
+  opacity: 0;
   transform: translateY(20rem);
   transition: 1s ease;
   pointer-events: none;
