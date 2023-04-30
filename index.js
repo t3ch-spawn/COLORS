@@ -1,10 +1,10 @@
-// const observer = new IntersectionObserver((entries) => {
-//   entries.forEach((entry, idx) => {
-//     if (entry.isIntersecting) {
-//       entry.target.classList.add("show");
-//     }
-//   });
-// });
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, idx) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+});
 
 const observer2 = new IntersectionObserver((entries2) => {
   entries2.forEach((entry2) => {
@@ -64,53 +64,53 @@ gsap.registerPlugin(ScrollTrigger);
 // GSAP FOR ANIMATIONS ON LOAD
 
 // ABOUT US LOAD
-gsap.from(".about", {
-  y: 230,
-  opacity: 0,
-  duration: 1,
-  ease: "ease",
-  scrollTrigger: ".about",
-});
+// gsap.from(".about", {
+//   y: 230,
+//   opacity: 0,
+//   duration: 1,
+//   ease: "ease",
+//   scrollTrigger: ".about",
+// });
 
-// POPULAR WEEK LOAD
-gsap.from(".popularWeek", {
-  y: 230,
-  opacity: 0,
-  duration: 1,
-  scrollTrigger: ".popularWeek",
-});
+// // POPULAR WEEK LOAD
+// gsap.from(".popularWeek", {
+//   y: 230,
+//   opacity: 0,
+//   duration: 1,
+//   scrollTrigger: ".popularWeek",
+// });
 
-// MODELS LOAD
-gsap.from(".models", {
-  y: 230,
-  opacity: 0,
-  duration: 1,
-  ease: "ease",
-  scrollTrigger: ".models",
-});
+// // MODELS LOAD
+// gsap.from(".models", {
+//   y: 230,
+//   opacity: 0,
+//   duration: 1,
+//   ease: "ease",
+//   scrollTrigger: ".models",
+// });
 
-// GALLERY LOAD
-gsap.from(".gallery", {
-  y: 230,
-  opacity: 0,
-  duration: 1,
-  ease: "ease",
-  scrollTrigger: ".gallery",
-});
+// // GALLERY LOAD
+// gsap.from(".gallery", {
+//   y: 230,
+//   opacity: 0,
+//   duration: 1,
+//   ease: "ease",
+//   scrollTrigger: ".gallery",
+// });
 
-// SUBSCRIBE LOAD
-gsap.from(".subscribe", {
-  y: 230,
-  opacity: 0,
-  duration: 1,
-  ease: "ease",
-  scrollTrigger: ".subscribe",
-});
+// // SUBSCRIBE LOAD
+// gsap.from(".subscribe", {
+//   y: 230,
+//   opacity: 0,
+//   duration: 1,
+//   ease: "ease",
+//   scrollTrigger: ".subscribe",
+// });
 
 const pageSections = document.querySelectorAll(".section");
 const imgContains = document.querySelectorAll(".img-contain");
 const gallery = document.querySelector(".gallery");
-// pageSections.forEach((section) => observer.observe(section));
+pageSections.forEach((section) => observer.observe(section));
 observer2.observe(gallery);
 
 const hamburger = document.querySelector(".navigation__hamburger");

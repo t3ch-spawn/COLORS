@@ -1319,4 +1319,15 @@ body {
 
 .section {
   opacity: 1;
+  transform: translateY(20rem);
+  transition: 1s ease;
+  pointer-events: none;
+  backface-visibility: none;
+  backface-visibility: hidden;
+}
+
+.section.show {
+  opacity: 1;
+  transform: translateY(0rem);
+  pointer-events: all;
 }
