@@ -14,6 +14,10 @@
   padding: 0;
 }
 
+div.line {
+  display: inline-block !important;
+}
+
 html {
   font-size: 62.5%; //1rem is 10px
   scroll-behavior: smooth;

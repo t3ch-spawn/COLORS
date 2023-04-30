@@ -58,7 +58,7 @@ main {
   font-size: 1.6rem;
   line-height: 3.5rem;
   width: 90%;
-  word-break: keep-all;
+  display: flex;
 }
 .hero__image {
   background-color: rgba(255, 127, 80, 0.5);
@@ -195,6 +195,7 @@ main {
 .about__descrip {
   width: 85%;
   font-size: 2rem;
+  display: flex;
 }
 .about .paragraph__anim {
   margin: 0;
@@ -1295,6 +1296,10 @@ header {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+div.line {
+  display: inline-block !important;
 }
 
 html {
