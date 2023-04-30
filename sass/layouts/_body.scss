@@ -42,6 +42,7 @@ main {
     font-size: 1.6rem;
     line-height: 3.5rem;
     width: 90%;
+    word-break: keep-all;
   }
 
   &__image {

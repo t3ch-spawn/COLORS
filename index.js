@@ -23,11 +23,13 @@ const about2 = new SplitType(".about__descrip-2");
 let about1Shown = false;
 let about2Shown = false;
 
+console.log(paragraphs);
+
 const observeAbout1 = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     const tl = gsap.timeline();
     if (entry.isIntersecting && !about1Shown) {
-      tl.from(about1.words, {
+      gsap.from(about1.lines, {
         y: "100%",
         opacity: 0,
         stagger: 0.04,
@@ -44,7 +46,7 @@ const observeAbout2 = new IntersectionObserver((entries) => {
     const tl = gsap.timeline();
 
     if (entry.isIntersecting && !about2Shown) {
-      tl.from(about2.words, {
+      gsap.from(about2.words, {
         y: "100%",
         opacity: 0,
         stagger: 0.04,
@@ -58,6 +60,54 @@ const observeAbout2 = new IntersectionObserver((entries) => {
 
 observeAbout1.observe(aboutDescrip1);
 observeAbout2.observe(aboutDescrip2);
+
+gsap.registerPlugin(ScrollTrigger);
+
+// GSAP FOR ANIMATIONS ON LOAD
+
+// ABOUT US LOAD
+gsap.from(".about", {
+  y: 250,
+  opacity: 0,
+  duration: 1,
+  ease: "ease",
+  scrollTrigger: ".about",
+});
+
+// POPULAR WEEK LOAD
+gsap.from(".popularWeek", {
+  y: 300,
+  opacity: 0,
+  duration: 1,
+  scrollTrigger: ".popularWeek",
+});
+
+// MODELS LOAD
+gsap.from(".models", {
+  y: 250,
+  opacity: 0,
+  duration: 1,
+  ease: "ease",
+  scrollTrigger: ".models",
+});
+
+// GALLERY LOAD
+gsap.from(".gallery", {
+  y: 250,
+  opacity: 0,
+  duration: 1,
+  ease: "ease",
+  scrollTrigger: ".gallery",
+});
+
+// SUBSCRIBE LOAD
+gsap.from(".subscribe", {
+  y: 250,
+  opacity: 0,
+  duration: 1,
+  ease: "ease",
+  scrollTrigger: ".subscribe",
+});
 
 // realWordAnim = new SplitType(".word__anim");
 
@@ -130,7 +180,7 @@ observeAbout2.observe(aboutDescrip2);
 const pageSections = document.querySelectorAll(".section");
 const imgContains = document.querySelectorAll(".img-contain");
 const gallery = document.querySelector(".gallery");
-pageSections.forEach((section) => observer.observe(section));
+// pageSections.forEach((section) => observer.observe(section));
 observer2.observe(gallery);
 
 const hamburger = document.querySelector(".navigation__hamburger");

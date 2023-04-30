@@ -1,14 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
-@-webkit-keyframes moveFromLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-400px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 @keyframes moveFromLeft {
   0% {
     opacity: 0;
@@ -17,16 +7,6 @@
   100% {
     opacity: 1;
     transform: translateX(0);
-  }
-}
-@-webkit-keyframes moveFromBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(400px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 @keyframes moveFromBottom {
@@ -61,8 +41,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  -webkit-animation: moveFromLeft 1s;
-          animation: moveFromLeft 1s;
+  animation: moveFromLeft 1s;
 }
 .hero__sub-heading {
   font-size: 2.4rem;
@@ -79,6 +58,7 @@ main {
   font-size: 1.6rem;
   line-height: 3.5rem;
   width: 90%;
+  word-break: keep-all;
 }
 .hero__image {
   background-color: rgba(255, 127, 80, 0.5);
@@ -87,15 +67,11 @@ main {
   align-items: flex-end;
   z-index: -1;
   border-radius: 7px 7px 13rem 0px;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  -webkit-animation: moveFromBottom 1s;
-          animation: moveFromBottom 1s;
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
+  animation: moveFromBottom 1s;
+  animation-delay: 0.3s;
+  animation-fill-mode: backwards;
 }
 .hero__image img {
   height: 55rem;
@@ -169,7 +145,6 @@ main {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin-right: 2.5rem;
@@ -184,7 +159,6 @@ main {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column-reverse;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -201,10 +175,8 @@ main {
   font-size: 10rem;
 }
 .about__image {
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -274,7 +246,6 @@ main {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -283,7 +254,6 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column-reverse;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin-left: 3rem;
@@ -602,9 +572,6 @@ main {
 .subscribe__input::-moz-placeholder {
   font-size: 1.8rem;
 }
-.subscribe__input:-ms-input-placeholder {
-  font-size: 1.8rem;
-}
 .subscribe__input::placeholder {
   font-size: 1.8rem;
 }
@@ -699,7 +666,6 @@ main {
   position: relative;
   padding: 0 1rem;
   cursor: pointer;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   display: flex;
@@ -767,7 +733,6 @@ main {
 header {
   width: 100%;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   left: 0;
@@ -833,8 +798,7 @@ header {
   flex-direction: column;
   overflow: hidden;
   height: 2.3rem;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   position: relative;
 }
 .navigation__item-container > *:not(:last-child) {
@@ -1049,8 +1013,7 @@ header {
     margin: 0;
     padding: 4rem;
     align-items: flex-start;
-    -webkit-animation: moveFromBottom 1s;
-            animation: moveFromBottom 1s;
+    animation: moveFromBottom 1s;
   }
   .hero__sub-heading {
     margin-bottom: 2.5rem;
@@ -1068,13 +1031,11 @@ header {
   }
   .hero__typography {
     width: 100%;
-    -webkit-animation: none;
-            animation: none;
+    animation: none;
   }
   .hero__image {
     border-radius: 7px 7px 9rem 7px;
-    -webkit-animation: none;
-            animation: none;
+    animation: none;
   }
   .about {
     margin-top: 12rem;
@@ -1352,21 +1313,5 @@ body {
 }
 
 .section {
-  opacity: 0;
-  filter: blur(5px);
-  transform: translateY(20rem);
-  transition: 1s ease;
-  pointer-events: none;
-  transition-delay: 0.05s;
-  -webkit-backface-visibility: none;
-          backface-visibility: none;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-}
-
-.section.show {
   opacity: 1;
-  filter: blur(0px);
-  transform: translateY(0rem);
-  pointer-events: all;
-}/*# sourceMappingURL=main.css.map */
+}
