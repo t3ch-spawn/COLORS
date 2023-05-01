@@ -238,6 +238,7 @@
     padding: 4rem;
     align-items: flex-start;
     // animation: fadeIn 1s;
+    animation: none;
 
     &__sub-heading {
       margin-bottom: 2.5rem;
@@ -652,6 +653,17 @@
 }
 
 @media screen and (max-width: 300px) {
+  /////////////////////////////
+  /// NAVIGATION QUERY
+
+  .navigation__right {
+    padding: 3rem;
+  }
+
+  .navigation__cta {
+    width: 12rem;
+  }
+
   /////////////////////////////
   /// HERO QUERY
   .hero {

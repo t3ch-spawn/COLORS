@@ -1025,7 +1025,7 @@ header {
     margin: 0;
     padding: 4rem;
     align-items: flex-start;
-    animation: fadeIn 1s;
+    animation: none;
   }
   .hero__sub-heading {
     margin-bottom: 2.5rem;
@@ -1282,6 +1282,12 @@ header {
   }
 }
 @media screen and (max-width: 300px) {
+  .navigation__right {
+    padding: 3rem;
+  }
+  .navigation__cta {
+    width: 12rem;
+  }
   .hero__heading {
     font-size: 6rem;
   }
