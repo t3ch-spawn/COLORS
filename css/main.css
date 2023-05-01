@@ -1025,6 +1025,7 @@ header {
     margin: 0;
     padding: 4rem;
     align-items: flex-start;
+    animation: fadeIn 1s;
   }
   .hero__sub-heading {
     margin-bottom: 2.5rem;
