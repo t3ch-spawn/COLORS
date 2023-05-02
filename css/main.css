@@ -608,6 +608,16 @@ main {
   width: 100%;
   justify-items: center;
   align-items: center;
+  max-width: 1300px;
+}
+.footer-container {
+  width: 100%;
+  background-color: #78e59b;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-items: center;
+  align-items: center;
   padding: 4rem 2rem;
   margin-top: 12rem;
 }
@@ -759,6 +769,7 @@ header {
   width: 90%;
   margin: 0 auto;
   padding: 1rem 0;
+  max-width: 1300px;
 }
 .navigation__logo {
   font-size: 2.4rem;

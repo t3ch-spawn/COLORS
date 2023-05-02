@@ -5,8 +5,19 @@
   width: 100%;
   justify-items: center;
   align-items: center;
-  padding: 4rem 2rem;
-  margin-top: $section-margin;
+  max-width: 1300px;
+
+  &-container {
+    width: 100%;
+    background-color: $lime-dark;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+    padding: 4rem 2rem;
+    margin-top: $section-margin;
+  }
 
   // top part of the footer
   &__content {
