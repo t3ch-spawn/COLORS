@@ -67,7 +67,7 @@ gsap.from(about1.words, {
   stagger: 0.04,
   scrollTrigger: ".about__descrip-1",
 });
-gsap.from(about2.words, {
+gsap.from(about2.words,{
   y: "100%",
   opacity: 0,
   stagger: 0.04,

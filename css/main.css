@@ -78,7 +78,6 @@ main {
   align-items: flex-end;
   z-index: -1;
   border-radius: 7px 7px 13rem 0px;
-  height: -moz-fit-content;
   height: fit-content;
   animation: moveFromBottom 1s;
   animation-delay: 0.3s;
@@ -156,7 +155,6 @@ main {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  width: -moz-fit-content;
   width: fit-content;
   margin-right: 2.5rem;
 }
@@ -170,7 +168,6 @@ main {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column-reverse;
-  width: -moz-fit-content;
   width: fit-content;
 }
 .about__column2 .about__descrip {
@@ -186,9 +183,7 @@ main {
   font-size: 10rem;
 }
 .about__image {
-  height: -moz-fit-content;
   height: fit-content;
-  width: -moz-fit-content;
   width: fit-content;
 }
 .about__image img {
@@ -258,7 +253,6 @@ main {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  width: -moz-fit-content;
   width: fit-content;
 }
 .popularWeek__column2 {
@@ -266,7 +260,6 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column-reverse;
-  width: -moz-fit-content;
   width: fit-content;
   margin-left: 3rem;
 }
@@ -581,9 +574,6 @@ main {
 .subscribe__input:focus {
   outline: 1px solid #78e59b;
 }
-.subscribe__input::-moz-placeholder {
-  font-size: 1.8rem;
-}
 .subscribe__input::placeholder {
   font-size: 1.8rem;
 }
@@ -688,7 +678,6 @@ main {
   position: relative;
   padding: 0 1rem;
   cursor: pointer;
-  width: -moz-fit-content;
   width: fit-content;
   display: flex;
   flex-wrap: wrap;
@@ -750,8 +739,18 @@ main {
   color: white;
   margin-top: 6rem;
   font-size: 1.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
-
+@media screen and (max-width: 850px) {
+  .footer__rights {
+    align-items: flex-start;
+  }
+}
 header {
   width: 100%;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);

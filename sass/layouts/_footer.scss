@@ -175,5 +175,17 @@
     color: white;
     margin-top: 6rem;
     font-size: 1.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+    @media screen and (max-width: 850px) {
+      align-items: flex-start
+    }
   }
+
+
 }
