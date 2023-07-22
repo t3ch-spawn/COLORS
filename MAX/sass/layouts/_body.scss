@@ -1,0 +1,552 @@
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 1300px;
+}
+
+.hero {
+  display: flex;
+  margin: $section-margin auto;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+
+  & > *:not(:last-child) {
+    margin-right: 3rem;
+  }
+
+  &__typography {
+    width: 70%;
+    display: flex;
+
+    flex-direction: column;
+    align-items: flex-start;
+    animation: moveFromLeft 1s;
+  }
+
+  &__sub-heading {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+  }
+
+  &__heading {
+    color: $lime-dark;
+    font-size: 20rem;
+    font-weight: 400;
+    line-height: 90%;
+    margin-bottom: 4rem;
+  }
+
+  &__descrip {
+    font-size: 1.6rem;
+    line-height: 3.5rem;
+    width: 90%;
+    display: flex;
+    min-height: 140px;
+  }
+
+  &__image {
+    background-color: $pink-ish-light;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    z-index: -1;
+    border-radius: 7px 7px 13rem 0px;
+    // overflow: hidden;
+    height: fit-content;
+    animation: moveFromBottom 1s;
+    animation-delay: 0.3s;
+    animation-fill-mode: backwards;
+
+    img {
+      height: 55rem;
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__cta {
+    background-color: $lime-dark;
+    width: 25rem;
+    height: 6.5rem;
+    color: white;
+    font-size: 2.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    border-radius: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s cubic-bezier(0.41, 1.8, 0.55, 1);
+
+    &:hover {
+      letter-spacing: 2px;
+      width: 26rem;
+    }
+  }
+}
+
+////////////////////////
+// ABOUT US
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  line-height: 3.5rem;
+
+  &__heading {
+    @include subHeadingStyle;
+
+    span {
+      margin-left: 1rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    width: 65%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__column1 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: fit-content;
+    margin-right: 2.5rem;
+
+    .about__descrip {
+      width: 100%;
+      font-size: 2rem;
+      margin-bottom: 7rem;
+    }
+  }
+  &__column2 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+    width: fit-content;
+
+    .about__descrip {
+      width: 100%;
+      font-size: 2rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__sub-heading {
+    -webkit-text-stroke: 1px black;
+    margin-bottom: 4rem;
+    color: transparent;
+    line-height: 100%;
+    font-size: 10rem;
+  }
+
+  &__image {
+    height: fit-content;
+    width: fit-content;
+
+    img {
+      height: 50rem;
+    }
+
+    &--1 {
+      background-color: $gray-ish;
+      border-radius: $pic-radius;
+      margin-bottom: 7rem;
+    }
+    &--2 {
+      background-color: $black-ish;
+      border-radius: $pic-radius;
+    }
+  }
+
+  &__descrip {
+    width: 85%;
+    font-size: 2rem;
+    display: flex;
+  }
+
+  .paragraph__anim {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+}
+
+//////////////////////////////
+/// POPULAR THIS WEEK!!
+
+.popularWeek {
+  margin-top: $section-margin;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__heading {
+    @include subHeadingStyle;
+    width: 50%;
+  }
+
+  &__content {
+    display: flex;
+    width: 65%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__column1 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: fit-content;
+  }
+  &__column2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    width: fit-content;
+    margin-left: 3rem;
+  }
+
+  &__main-img {
+    // margin-bottom: 5rem;
+
+    img {
+      height: 45rem;
+      border-radius: $pic-radius;
+    }
+
+    &--1 {
+      background-color: $blue-light;
+    }
+    &--2 {
+      background-color: $lime-light;
+    }
+  }
+
+  &__img-container {
+    width: 20rem;
+
+    background-color: $pink-ish-light;
+    border-radius: $pic-radius;
+  }
+
+  &__sub-img {
+    padding: 2.5rem;
+
+    img {
+      height: 35rem;
+      border-radius: $pic-radius;
+    }
+
+    &--1 {
+      background-image: linear-gradient(
+        90deg,
+        $purple-light-2 45%,
+        $purple-dark 20%
+      );
+    }
+    &--2 {
+      background-color: $pink-ish-light;
+    }
+  }
+
+  &__cta {
+    margin-top: 2rem;
+    width: 14rem;
+    height: 5rem;
+    display: grid;
+    place-items: center;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s cubic-bezier(0.41, 1.8, 0.55, 1);
+
+    &--1 {
+      background-color: $blue-dark;
+    }
+    &--2 {
+      background-color: $purple-dark;
+    }
+    &--3 {
+      background-color: $lime-dark;
+    }
+    &--4 {
+      background-color: $pink-ish-dark;
+    }
+
+    &:hover {
+      letter-spacing: 2px;
+      width: 15rem;
+    }
+  }
+}
+
+/////////////////////////////////
+//MODELS!!
+
+.models {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: $section-margin;
+
+  &__heading {
+    @include subHeadingStyle;
+  }
+
+  &__content {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+///////////////////////////
+//GALLERY
+.gallery {
+  margin-top: $section-margin;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__heading {
+    @include subHeadingStyle;
+  }
+
+  &__content {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__images-container {
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+
+    // make-shift gap for children
+    & > *:not(:last-child) {
+      margin-right: -10rem;
+    }
+  }
+
+  // outer-rectangle with background-color
+  &__rectangle {
+    display: flex;
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    overflow: hidden;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      position: relative;
+    }
+
+    .img-contain {
+      position: absolute;
+      transition: 1.5s cubic-bezier(0.41, 1.8, 0.55, 1);
+      opacity: 1;
+      z-index: 2;
+    }
+
+    // styling for drop animation of the pictures
+    .img-contain.active {
+      transform: translateY(-300px);
+      opacity: 0;
+    }
+
+    &--1 {
+      background-color: $lime-light;
+      transform: translateY(8rem) rotate(-11deg);
+      justify-content: flex-start;
+
+      // inner-div housing the image itself
+      .img-contain {
+        top: 50%;
+        left: -2rem;
+        transform: rotate(7deg) translateY(-50%);
+        transition-delay: 0.5s;
+      }
+
+      img {
+        height: 13rem;
+      }
+    }
+    &--2 {
+      background-color: $lime-dark;
+      transform: translateY(4rem) rotate(-10deg);
+
+      // inner-div housing the image itself
+      .img-contain {
+        top: 10%;
+        left: -2rem;
+        transform: rotate(7deg) translateY(-10%);
+        transition-delay: 1s;
+      }
+
+      img {
+        height: 16rem;
+      }
+    }
+    &--3 {
+      background-color: $yellow-light;
+      transform: translateY(2rem);
+
+      // inner-div housing the image itself
+      .img-contain {
+        top: -10%;
+        left: -2rem;
+        transition-delay: 1.5s;
+      }
+
+      img {
+        height: 13rem;
+      }
+    }
+    &--4 {
+      background-color: $yellow-dark;
+
+      // inner-div housing the image itself
+      .img-contain {
+        top: 20%;
+        left: 0;
+        transition-delay: 2s;
+      }
+
+      img {
+        height: 13.5rem;
+      }
+    }
+    &--5 {
+      background-color: $blue-light;
+      transform: translateY(0rem) rotate(10deg);
+
+      // inner-div housing the image itself
+      .img-contain {
+        top: 20%;
+        left: -20%;
+        transform: rotate(-9deg);
+        transition-delay: 2.5s;
+      }
+
+      img {
+        height: 13rem;
+      }
+    }
+    &--6 {
+      background-color: $blue-dark;
+      transform: translateY(4rem) rotate(11deg);
+
+      // inner-div housing the image itself
+      .img-contain {
+        transform: rotate(-9deg);
+        bottom: -10%;
+        transition-delay: 3s;
+      }
+
+      img {
+        height: 15rem;
+      }
+    }
+  }
+}
+
+//////////////////////////
+//SUBSCRIBE SECTION!!
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: calc($section-margin + 12rem);
+
+  &__heading {
+    @include subHeadingStyle;
+  }
+
+  &__content {
+    background-color: $gray-ish;
+    width: 90%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+
+    // makeshift gap for children
+    & > *:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__sub-heading {
+    font-size: 3rem;
+    font-weight: 500;
+  }
+
+  &__descrip {
+    font-size: 1.8rem;
+  }
+
+  &__input-box {
+    display: flex;
+    width: 90%;
+    min-height: 5rem;
+  }
+
+  &__input {
+    width: 70%;
+    padding: 0 2rem;
+    outline: none;
+    border: none;
+    font-size: 1.8rem;
+  }
+
+  &__input:focus {
+    outline: 1px solid $lime-dark;
+  }
+
+  &__input::placeholder {
+    font-size: 1.8rem;
+  }
+
+  &__btn {
+    background-color: $lime-dark;
+    width: 30%;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 2rem;
+    color: white;
+    transition: 0.3s cubic-bezier(0.41, 1.8, 0.55, 1);
+
+    &:hover {
+      letter-spacing: 2px;
+    }
+  }
+}

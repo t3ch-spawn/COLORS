@@ -1,0 +1,30 @@
+// aligining a absolutely possitioned element
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin subHeadingStyle {
+  margin-bottom: $heading-margin-bottom;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 5.4rem;
+  text-align: center;
+
+  span {
+    color: $lime-dark;
+  }
+
+  @media screen and (max-width: 850px) {
+    font-size: 4.5rem;
+  }
+  @media screen and (max-width: 750px) {
+    font-size: 4rem;
+  }
+  @media screen and (max-width: 400px) {
+    font-size: 3.6rem;
+  }
+}
